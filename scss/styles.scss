@@ -1,0 +1,23 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+#main-nav {
+    background-color: $unaffiliatedBlue;
+    ul {
+        width: 100%;
+        @include clearFix;
+    }
+    li {
+        float: left;
+        width: (100% / 6);
+    }
+    a {
+        padding: 10px;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        &:hover {
+            background: grey;
+        }
+    }
+}
