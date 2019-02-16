@@ -1,1 +1,14 @@
-$unaffiliatedBlue: #c75a1b;
+$unaffiliatedColor: #5F9EA0;
+//Website continuous font:
+$unaffiliatedFont: 'Yanone Kaffeesatz',
+sans-serif;
+//site background color:
+$backgrndColor: rgb(231, 229, 229);
+//nav color:
+$headerFooterColor: hsla(182, 25%, 50%, 0.3);
+//selected nav color:
+$selectedColor: #464646;
+//Nav animation first timing:
+$navAnimation4: all 0.4s ease-in-out;
+//Nav animation second timing:
+$navAnimation5: all 0.5s ease-in-out;

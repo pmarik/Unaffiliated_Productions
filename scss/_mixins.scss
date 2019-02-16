@@ -5,3 +5,12 @@
         clear: both;
     }
 }
+
+@mixin greyScale {
+    filter: grayscale(100%);
+}
+
+@mixin removeGreyScale {
+    filter: grayscale(0%);
+    transition: 0.3s ease-in;
+}
