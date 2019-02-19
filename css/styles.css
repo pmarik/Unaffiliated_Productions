@@ -43,7 +43,7 @@ li {
 
 body {
   font-family: "Yanone Kaffeesatz", sans-serif;
-  background-color: #e7e5e5;
+  background-color: white;
   overflow-x: hidden; }
 
 header {
@@ -112,7 +112,7 @@ nav {
         height: 50px;
         line-height: 50px;
         padding: 0 20px;
-        color: #464646;
+        color: #454545;
         letter-spacing: 2px;
         text-decoration: none;
         border-radius: 5px; }
@@ -124,7 +124,7 @@ nav {
           padding-bottom: 8px; }
         nav ul li a:hover, nav ul li a#current:hover {
           border-bottom: none;
-          background-color: #464646;
+          background-color: #454545;
           padding: 10px 20px;
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
@@ -135,10 +135,9 @@ nav {
 .wrapper {
   min-height: 100%;
   margin-bottom: -100px; }
-
-.wrapper::after {
-  content: "";
-  display: block; }
+  .wrapper::after {
+    content: "";
+    display: block; }
 
 #main::before {
   content: '';
@@ -160,6 +159,7 @@ nav {
   -webkit-box-shadow: 0 4px 2px -2px gray;
   box-shadow: 0 4px 2px -2px gray; }
 
+/***** HOME PAGE *****/
 .video-wrap {
   z-index: 0;
   height: 100vh;
@@ -204,18 +204,62 @@ nav {
     min-width: 100%;
     min-height: 100%; }
 
+.about-body {
+  text-align: center; }
+  .about-body #about-banner {
+    margin-top: 5%;
+    width: 90%;
+    height: auto; }
+  .about-body h4 {
+    margin: 5% auto 10% auto;
+    width: 80%;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    color: #454545;
+    letter-spacing: 1px; }
+    .about-body h4 a {
+      text-decoration: none;
+      color: #5F9EA0; }
+      .about-body h4 a:hover {
+        text-decoration: underline; }
+  .about-body h1 {
+    padding-bottom: 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: black; }
+  .about-body .sponsors-container {
+    margin: 40px auto 100px auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .about-body .sponsors-container a {
+      padding: 30px; }
+      .about-body .sponsors-container a img:hover,
+      .about-body .sponsors-container a img:active {
+        -webkit-filter: drop-shadow(8px 8px 10px #5F9EA0);
+        filter: drop-shadow(8px 8px 10px #5F9EA0); }
+
 footer {
   border-top-style: solid;
   border-width: 2px;
-  border-color: black;
+  border-color: #454545;
   margin-top: -100px;
   clear: both;
   width: 80%;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  margin: 0 auto;
-  background-color: rgba(96, 157, 159, 0.3);
+  margin: 10px auto;
   text-align: center;
   padding: 1em 2em; }
   footer .social-links {
@@ -241,14 +285,19 @@ footer {
         -webkit-transition: 0.1s ease-in;
         -o-transition: 0.1s ease-in;
         transition: 0.1s ease-in; }
+  footer a {
+    color: #337b7e;
+    text-decoration: none; }
+    footer a:hover {
+      color: #065153; }
 
 footer,
 .wrapper::after {
   height: 100px; }
 
-img[src$="ns-icon-white.png"]:hover {
-  -webkit-filter: invert(100);
-  filter: invert(100);
+img[src$="ns-icon.png"]:hover {
+  -webkit-filter: contrast(0%);
+  filter: contrast(0%);
   -webkit-transition: 0.1s ease-in;
   -o-transition: 0.1s ease-in;
   transition: 0.1s ease-in; }
@@ -331,14 +380,14 @@ img[src$="ns-icon-white.png"]:hover {
       display: block;
       text-align: center;
       border-radius: 5px;
-      background-color: #464646; }
+      background-color: #454545; }
       nav ul li a {
         color: #FFF; }
       nav ul li:hover {
         background-color: white;
         border-radius: 5px; }
         nav ul li:hover a {
-          color: #464646;
+          color: #454545;
           background-color: #FFF;
           -webkit-transition: 0s;
           -o-transition: 0s;
@@ -351,10 +400,15 @@ img[src$="ns-icon-white.png"]:hover {
             padding: 10px 20px;
             border-radius: 0;
             border-width: 0;
-            color: #464646;
+            color: #454545;
             border-bottom: solid;
             border-width: 1px;
             border-bottom-color: black; }
+  .about-body {
+    text-align: center; }
+    .about-body #about-banner {
+      width: 100%;
+      height: auto; }
   footer {
     width: 100%;
     -webkit-transition: 0.4s;

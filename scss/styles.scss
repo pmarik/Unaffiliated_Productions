@@ -94,11 +94,10 @@ nav {
     min-height: 100%;
     // negative margin is same as footer height
     margin-bottom: -100px;
-}
-
-.wrapper::after {
-    content: "";
-    display: block;
+    &::after {
+        content: "";
+        display: block;
+    }
 }
 
 #main::before {
@@ -122,7 +121,10 @@ nav {
     box-shadow: 0 4px 2px -2px gray;
 }
 
-//Home page video header 
+
+/***** HOME PAGE *****/
+
+//Video header
 .video-wrap {
     z-index: 0;
     height: 100vh;
@@ -165,17 +167,67 @@ nav {
     }
 }
 
+//***** VIDEOS PAGE *****//
+//***** BLOG PAGE *****//
+//***** PROJECTS PAGE *****//
+//***** ABOUT PAGE ******//
+.about-body {
+    text-align: center;
+    #about-banner {
+        margin-top: 5%;
+        width: 90%;
+        height: auto;
+    }
+    h4 {
+        margin: 5% auto 10% auto;
+        width: 80%;
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        color: $selectedColor;
+        letter-spacing: 1px;
+        a {
+            text-decoration: none;
+            color: $unaffiliatedColor;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    h1 {
+        padding-bottom: 20px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+    }
+    .sponsors-container {
+        margin: 40px auto 100px auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        a {
+            padding: 30px;
+            img:hover,
+            img:active {
+                filter: drop-shadow(8px 8px 10px $unaffiliatedColor);
+            }
+        }
+    }
+}
+
+//***** CONTACT PAGE *****//
 //***** Footer *****//
 footer {
     border-top-style: solid;
     border-width: 2px;
-    border-color: black;
+    border-color: $selectedColor;
     margin-top: -100px;
     clear: both;
     width: 80%;
     transition: 0.4s;
-    margin: 0 auto;
-    background-color: $headerFooterColor;
+    margin: 10px auto;
     text-align: center;
     padding: 1em 2em;
     .social-links {
@@ -193,6 +245,13 @@ footer {
             }
         }
     }
+    a {
+        color: rgb(51, 123, 126);
+        text-decoration: none;
+        &:hover {
+            color: rgb(6, 81, 83);
+        }
+    }
 }
 
 footer,
@@ -200,8 +259,8 @@ footer,
     height: 100px;
 }
 
-img[src$="ns-icon-white.png"]:hover {
-    filter: invert(100);
+img[src$="ns-icon.png"]:hover {
+    filter: contrast(0%);
     transition: 0.1s ease-in;
 }
 
@@ -319,6 +378,18 @@ img[src$="ns-icon-white.png"]:hover {
         }
     }
     //***** Page Body *****//
+    //***** VIDEOS PAGE *****//
+    //***** BLOG PAGE *****//
+    //***** PROJECTS PAGE *****//
+    //***** ABOUT PAGE ******//
+    .about-body {
+        text-align: center;
+        #about-banner {
+            width: 100%;
+            height: auto;
+        }
+    }
+    //***** CONTACT PAGE *****//
     //***** Footer *****//
     footer {
         width: 100%;
