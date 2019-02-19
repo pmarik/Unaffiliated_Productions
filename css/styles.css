@@ -208,10 +208,10 @@ nav {
   margin: 5% auto 2% auto;
   color: #454545; }
 
-.projects-body #project-h1 {
+.projects-body #project-h1 h1 {
   font-size: 3em;
   text-align: center; }
-  .projects-body #project-h1::before, .projects-body #project-h1::after {
+  .projects-body #project-h1 h1::before, .projects-body #project-h1 h1::after {
     content: ' ';
     height: 15px;
     margin: 0 10px;
@@ -228,25 +228,20 @@ nav {
 .projects-body #projects-grid {
   margin: 0% auto 5% auto; }
   .projects-body #projects-grid .project {
-    margin: 5% auto; }
-    .projects-body #projects-grid .project:after {
-      content: "";
-      display: block;
-      clear: both; }
-    .projects-body #projects-grid .project::before {
-      content: '';
-      display: block;
-      border-top-style: solid;
-      border-top-width: 1px;
-      border-top-color: black;
-      width: 44%;
-      float: right; }
+    margin: 5% auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
     .projects-body #projects-grid .project .video-wrapper {
       position: relative;
       width: 55%;
       height: 0;
-      padding-bottom: 31%;
-      float: left; }
+      padding-bottom: 31%; }
       .projects-body #projects-grid .project .video-wrapper iframe {
         position: absolute;
         top: 0;
@@ -254,8 +249,21 @@ nav {
         width: 100%;
         height: 100%; }
     .projects-body #projects-grid .project .video-description {
-      width: 40%;
-      float: right; }
+      width: 44%;
+      padding: 0 3%; }
+      .projects-body #projects-grid .project .video-description a {
+        text-decoration: none; }
+        .projects-body #projects-grid .project .video-description a:visited {
+          color: #454545; }
+        .projects-body #projects-grid .project .video-description a:hover {
+          color: #5F9EA0; }
+      .projects-body #projects-grid .project .video-description::before {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-top-color: #454545; }
 
 .about-body {
   text-align: center; }
@@ -457,6 +465,31 @@ img[src$="ns-icon.png"]:hover {
             border-bottom: solid;
             border-width: 1px;
             border-bottom-color: black; }
+  .projects-body #project-h1 h1 {
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    font-size: 2em; }
+    .projects-body #project-h1 h1::before, .projects-body #project-h1 h1::after {
+      display: none; }
+  .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .project .video-wrapper {
+      min-width: 320px;
+      min-height: 179px; }
+    .project .video-description {
+      min-width: 400px;
+      text-align: center;
+      margin-bottom: 10px; }
   .about-body {
     text-align: center; }
     .about-body #about-banner {

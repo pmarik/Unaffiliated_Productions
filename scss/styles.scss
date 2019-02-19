@@ -176,18 +176,20 @@ nav {
         color: $selectedColor;
     }
     #project-h1 {
-        font-size: 3em;
-        text-align: center;
-        &::before,
-        &::after {
-            content: ' ';
-            height: 15px;
-            margin: 0 10px;
-            width: 50px;
-            display: inline-block;
-            border-top-style: solid;
-            border-top-width: 2px;
-            border-top-color: $unaffiliatedColor;
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            &::before,
+            &::after {
+                content: ' ';
+                height: 15px;
+                margin: 0 10px;
+                width: 50px;
+                display: inline-block;
+                border-top-style: solid;
+                border-top-width: 2px;
+                border-top-color: $unaffiliatedColor;
+            }
         }
     }
     #project-p {
@@ -198,22 +200,14 @@ nav {
         margin: 0% auto 5% auto;
         .project {
             margin: 5% auto;
-            @include clearFix;
-            &::before {
-                content: '';
-                display: block;
-                border-top-style: solid;
-                border-top-width: 1px;
-                border-top-color: black;
-                width: 44%;
-                float: right;
-            }
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             .video-wrapper {
                 position: relative;
                 width: 55%;
                 height: 0;
                 padding-bottom: 31%;
-                float: left;
                 iframe {
                     position: absolute;
                     top: 0;
@@ -223,8 +217,25 @@ nav {
                 }
             }
             .video-description {
-                width: 40%;
-                float: right;
+                width: 44%;
+                padding: 0 3%;
+                a {
+                    text-decoration: none;
+                    &:visited {
+                        color: $selectedColor;
+                    }
+                    &:hover {
+                        color: $unaffiliatedColor;
+                    }
+                }
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 100%;
+                    border-top-style: solid;
+                    border-top-width: 1px;
+                    border-top-color: $selectedColor;
+                }
             }
         }
     }
@@ -441,6 +452,32 @@ img[src$="ns-icon.png"]:hover {
     //***** VIDEOS PAGE Mobile *****//
     //***** BLOG PAGE Mobile*****//
     //***** PROJECTS PAGE Mobile*****//
+    .projects-body {
+        #project-h1 {
+            h1 {
+                transition: $navAnimation4;
+                font-size: 2em;
+                &::before,
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .project {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        .video-wrapper {
+            min-width: 320px;
+            min-height: 179px;
+        }
+        .video-description {
+            min-width: 400px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
     //***** ABOUT PAGE Mobile******//
     .about-body {
         text-align: center;
