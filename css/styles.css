@@ -204,6 +204,59 @@ nav {
     min-width: 100%;
     min-height: 100%; }
 
+.projects-body h1 {
+  margin: 5% auto 2% auto;
+  color: #454545; }
+
+.projects-body #project-h1 {
+  font-size: 3em;
+  text-align: center; }
+  .projects-body #project-h1::before, .projects-body #project-h1::after {
+    content: ' ';
+    height: 15px;
+    margin: 0 10px;
+    width: 50px;
+    display: inline-block;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: #5F9EA0; }
+
+.projects-body #project-p {
+  text-align: center;
+  font-size: 1.3em; }
+
+.projects-body #projects-grid {
+  margin: 0% auto 5% auto; }
+  .projects-body #projects-grid .project {
+    margin: 5% auto; }
+    .projects-body #projects-grid .project:after {
+      content: "";
+      display: block;
+      clear: both; }
+    .projects-body #projects-grid .project::before {
+      content: '';
+      display: block;
+      border-top-style: solid;
+      border-top-width: 1px;
+      border-top-color: black;
+      width: 44%;
+      float: right; }
+    .projects-body #projects-grid .project .video-wrapper {
+      position: relative;
+      width: 55%;
+      height: 0;
+      padding-bottom: 31%;
+      float: left; }
+      .projects-body #projects-grid .project .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+    .projects-body #projects-grid .project .video-description {
+      width: 40%;
+      float: right; }
+
 .about-body {
   text-align: center; }
   .about-body #about-banner {
