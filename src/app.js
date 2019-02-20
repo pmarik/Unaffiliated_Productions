@@ -1,5 +1,5 @@
 "use strict";
-
+import { imgSlider } from './imageSlider.js';
 
 
 /**********************************
@@ -7,10 +7,6 @@
  * 
  * 
  * *******************************/
-
-
-
-
 //toggle animated nav when scrolling vertically
 let scrollHeight;
 let animatedHeader = document.getElementsByTagName('header')[0];
@@ -47,6 +43,14 @@ window.onresize = window.onload = function() {
         burger.classList.add('visibleNav');
     }
     videoHeight = (document.getElementsByClassName('video-wrap')[0].clientHeight) - 80;
+
+
+
+
+    /* ALL ON SCROLL EVENTS ***********************
+     **********************************************
+     ***********************************************
+     ***********************************************/
 }
 window.onscroll = window.onload = function() {
     scrollHeight = this.scrollY;
@@ -57,4 +61,22 @@ window.onscroll = window.onload = function() {
         animatedHeader.classList.remove('verticalAnimate');
     }
 
+}
+
+/**************************************
+ * Image slider
+ * 
+ **************************************/
+let vpwidth;
+window.onresize = window.onload = function() {
+    vpwidth = this.innerWidth;
+    if (vpwidth < 939) {
+        imgSlider();
+    } else {
+        let slider = document.querySelectorAll('.slide');
+        for (let i = 0; i < slider.length; i++) {
+            slider[i].style.display = 'block';
+
+        }
+    }
 }

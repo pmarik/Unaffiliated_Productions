@@ -168,6 +168,52 @@ nav {
 }
 
 //***** VIDEOS PAGE *****//
+#videos-header {
+    margin: 0 auto;
+    width: 100%;
+    #slider {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .slide {
+            display: block;
+            height: 100px;
+            .slide-content {
+                overflow-y: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                a {
+                    opacity: 0.5;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*
+#videos-header {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    a {
+        img {
+            filter: opacity(50%);
+            &:hover,
+            &#currentVid {
+                transition: $animation1;
+                filter: opacity(100%);
+            }
+        }
+    }
+}
+*/
+
 //***** BLOG PAGE *****//
 //***** PROJECTS PAGE *****//
 .projects-body {
@@ -450,6 +496,67 @@ img[src$="ns-icon.png"]:hover {
     }
     //***** Page Body Mobile *****//
     //***** VIDEOS PAGE Mobile *****//
+    #videos-header {
+        margin: 0 auto;
+        position: relative;
+        min-width: 300px;
+        max-width: 400px;
+        height: 100px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        .arrow {
+            cursor: pointer;
+            position: absolute;
+            top: 90%;
+            margin-top: -50px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        #arrow-left {
+            border-width: 12px 20px 12px 0;
+            border-color: transparent $selectedColor transparent transparent;
+            left: 0;
+            margin-left: 2%;
+            &:hover {
+                opacity: 0.5;
+            }
+            &:active {
+                border-color: transparent $unaffiliatedColor transparent transparent;
+            }
+        }
+        #arrow-right {
+            border-width: 12px 0 12px 20px;
+            border-color: transparent transparent transparent $selectedColor;
+            right: 0;
+            margin-right: 2%;
+            &:hover {
+                opacity: 0.5;
+            }
+            &:active {
+                border-color: transparent transparent transparent $unaffiliatedColor;
+            }
+        }
+        #slider {
+            justify-content: center;
+            .slide {
+                height: 100px;
+                .slide-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    a {
+                        opacity: 0.5;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
     //***** BLOG PAGE Mobile*****//
     //***** PROJECTS PAGE Mobile*****//
     .projects-body {
