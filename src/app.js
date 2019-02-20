@@ -16,7 +16,6 @@ if (checkVideo[1].className == "video-wrap") {
     videoHeight = document.getElementsByClassName('video-wrap')[0].clientHeight;
 }
 
-
 videoHeight -= 70;
 //readjust scroll measurement when resizing window for nav bar
 
@@ -33,25 +32,39 @@ document.querySelector("#nav-toggle")
         burger.classList.toggle('visibleNav');
     });
 
+/* ALL ON WINDOW RESIZE EVENTS *****************
+ *
+ ***********************************************/
 
-//reset the burger menu to default when open and resizing window
 let width;
 window.onresize = window.onload = function() {
     width = this.innerWidth;
     if (width > 939) {
+        //reset the burger menu to default when open and resizing window
         document.querySelector("#nav-toggle").classList.remove("active");
         burger.classList.add('visibleNav');
+
+        //remove image slider with larger viewport size
+        let slider = document.querySelectorAll('.slide');
+        for (let i = 0; i < slider.length; i++) {
+            slider[i].style.display = 'block';
+
+        }
+    } else {
+        //add image slider with smaller viewport size
+        imgSlider();
+        if (checkVideo[1].className == "video-wrap") {
+            videoHeight = document.getElementsByClassName('video-wrap')[0].clientHeight - 80;
+        }
     }
-    videoHeight = (document.getElementsByClassName('video-wrap')[0].clientHeight) - 80;
-
-
-
-
-    /* ALL ON SCROLL EVENTS ***********************
-     **********************************************
-     ***********************************************
-     ***********************************************/
 }
+
+
+
+/* ALL ON SCROLL EVENTS ************************
+ *
+ ***********************************************/
+
 window.onscroll = window.onload = function() {
     scrollHeight = this.scrollY;
     if (scrollHeight > videoHeight) {
@@ -61,22 +74,4 @@ window.onscroll = window.onload = function() {
         animatedHeader.classList.remove('verticalAnimate');
     }
 
-}
-
-/**************************************
- * Image slider
- * 
- **************************************/
-let vpwidth;
-window.onresize = window.onload = function() {
-    vpwidth = this.innerWidth;
-    if (vpwidth < 939) {
-        imgSlider();
-    } else {
-        let slider = document.querySelectorAll('.slide');
-        for (let i = 0; i < slider.length; i++) {
-            slider[i].style.display = 'block';
-
-        }
-    }
 }

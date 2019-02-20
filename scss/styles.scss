@@ -185,34 +185,17 @@ nav {
                 align-items: center;
                 text-align: center;
                 a {
-                    opacity: 0.5;
+                    opacity: 0.6;
+                    &#currentVid,
                     &:hover {
                         opacity: 1;
+                        transition: $animation1;
                     }
                 }
             }
         }
     }
 }
-
-
-/*
-#videos-header {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    a {
-        img {
-            filter: opacity(50%);
-            &:hover,
-            &#currentVid {
-                transition: $animation1;
-                filter: opacity(100%);
-            }
-        }
-    }
-}
-*/
 
 //***** BLOG PAGE *****//
 //***** PROJECTS PAGE *****//

@@ -234,27 +234,13 @@ nav {
         align-items: center;
         text-align: center; }
         #videos-header #slider .slide .slide-content a {
-          opacity: 0.5; }
-          #videos-header #slider .slide .slide-content a:hover {
-            opacity: 1; }
+          opacity: 0.6; }
+          #videos-header #slider .slide .slide-content a#currentVid, #videos-header #slider .slide .slide-content a:hover {
+            opacity: 1;
+            -webkit-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out; }
 
-/*
-#videos-header {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    a {
-        img {
-            filter: opacity(50%);
-            &:hover,
-            &#currentVid {
-                transition: $animation1;
-                filter: opacity(100%);
-            }
-        }
-    }
-}
-*/
 .projects-body h1 {
   margin: 5% auto 2% auto;
   color: #454545; }
