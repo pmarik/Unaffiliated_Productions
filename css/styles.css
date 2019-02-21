@@ -87,6 +87,8 @@ header {
     height: 100%;
     min-height: 20px;
     max-height: 60px; }
+    .logo-container .main-logo:hover {
+      opacity: 0.5; }
 
 nav {
   float: right;
@@ -219,7 +221,13 @@ nav {
     justify-content: space-around; }
     #videos-header #slider .slide {
       display: block;
-      height: 100px; }
+      height: 100px;
+      opacity: 0.6; }
+      #videos-header #slider .slide#currentVid, #videos-header #slider .slide:hover {
+        opacity: 1;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
       #videos-header #slider .slide .slide-content {
         overflow-y: hidden;
         display: -webkit-box;
@@ -233,13 +241,6 @@ nav {
         -ms-flex-align: center;
         align-items: center;
         text-align: center; }
-        #videos-header #slider .slide .slide-content a {
-          opacity: 0.6; }
-          #videos-header #slider .slide .slide-content a#currentVid, #videos-header #slider .slide .slide-content a:hover {
-            opacity: 1;
-            -webkit-transition: all 0.2s ease-in-out;
-            -o-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out; }
 
 .projects-body h1 {
   margin: 5% auto 2% auto;
@@ -289,6 +290,10 @@ nav {
         left: 0;
         width: 100%;
         height: 100%; }
+      .projects-body #projects-grid .project .video-wrapper img:hover,
+      .projects-body #projects-grid .project .video-wrapper img:active {
+        -webkit-filter: drop-shadow(8px 8px 10px #5F9EA0);
+        filter: drop-shadow(8px 8px 10px #5F9EA0); }
     .projects-body #projects-grid .project .video-description {
       width: 44%;
       padding: 0 3%; }
@@ -548,6 +553,11 @@ img[src$="ns-icon.png"]:hover {
       justify-content: center; }
       #videos-header #slider .slide {
         height: 100px; }
+        #videos-header #slider .slide#currentVid, #videos-header #slider .slide:hover {
+          opacity: 1;
+          -webkit-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out; }
         #videos-header #slider .slide .slide-content {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -563,10 +573,6 @@ img[src$="ns-icon.png"]:hover {
           -ms-flex-align: center;
           align-items: center;
           text-align: center; }
-          #videos-header #slider .slide .slide-content a {
-            opacity: 0.5; }
-            #videos-header #slider .slide .slide-content a:hover {
-              opacity: 1; }
   .projects-body #project-h1 h1 {
     -webkit-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;

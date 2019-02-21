@@ -8,7 +8,19 @@ export function imgSlider() {
     let sliderImages = document.querySelectorAll('.slide');
     let arrowLeft = document.querySelector('#arrow-left');
     let arrowRight = document.querySelector('#arrow-right');
+    let currentPage = document.getElementById('currentVid');
     let current = 0;
+
+
+    //Get the correct image value for the page showing so arrows show correct next image when scrolling
+    for (let i = 0; i < sliderImages.length; i++) {
+        if (sliderImages[i].classList[1] == currentPage.classList[1]) {
+            break;
+        } else {
+            current++;
+        }
+    }
+
 
 
 
@@ -22,7 +34,9 @@ export function imgSlider() {
 
     function startSlide() {
         reset();
-        sliderImages[0].style.display = 'block';
+        currentPage.style.display = 'block';
+
+
     }
 
     function slideLeft() {
