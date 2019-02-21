@@ -277,9 +277,13 @@ nav {
     .projects-body #projects-grid .project .video-wrapper {
       position: relative;
       width: 55%;
-      height: 0;
+      height: 100px;
+      background-image: url(../images/loader2.gif);
+      background-repeat: no-repeat;
+      background-position: center;
       padding-bottom: 31%; }
-      .projects-body #projects-grid .project .video-wrapper iframe {
+      .projects-body #projects-grid .project .video-wrapper iframe,
+      .projects-body #projects-grid .project .video-wrapper img {
         position: absolute;
         top: 0;
         left: 0;
@@ -407,9 +411,11 @@ img[src$="ns-icon.png"]:hover {
     transition: all 0.4s ease-in-out;
     width: 98%;
     min-width: 85%; }
-    header .nav-container .logo-container .main-logo {
+    header .nav-container .logo-container a .main-logo {
       width: 200px;
       height: 40px; }
+      header .nav-container .logo-container a .main-logo:hover {
+        opacity: 0; }
   #nav-toggle {
     background: transparent;
     position: absolute;

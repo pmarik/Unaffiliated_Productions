@@ -235,9 +235,13 @@ nav {
             .video-wrapper {
                 position: relative;
                 width: 55%;
-                height: 0;
+                height: 100px;
+                background-image: url(../images/loader2.gif);
+                background-repeat: no-repeat;
+                background-position: center;
                 padding-bottom: 31%;
-                iframe {
+                iframe,
+                img {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -372,9 +376,14 @@ img[src$="ns-icon.png"]:hover {
             width: 98%;
             min-width: 85%;
             .logo-container {
-                .main-logo {
-                    width: 200px;
-                    height: 40px;
+                a {
+                    .main-logo {
+                        width: 200px;
+                        height: 40px;
+                        &:hover {
+                            opacity: 0;
+                        }
+                    }
                 }
             }
         }
