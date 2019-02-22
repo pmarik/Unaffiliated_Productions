@@ -199,6 +199,53 @@ nav {
 }
 
 //***** BLOG PAGE *****//
+.blog-post {
+    color: $selectedColor;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .blog-content {
+        width: 75%;
+        min-width: 661px;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: black;
+        padding-bottom: 10px;
+        .img-blog-wrap {
+            max-width: 650px;
+            min-width: 200px;
+            margin: auto;
+            position: relative;
+            img {
+                width: 100%;
+                height: auto;
+                background-image: url(../images/loader2.gif);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        a {
+            &:link,
+            &:visited {
+                color: $selectedColor;
+            }
+            &:hover,
+            &:active {
+                color: $unaffiliatedColor
+            }
+        }
+    }
+    .blog-side-banner {
+        margin-top: 2%;
+        width: 25%;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: black;
+    }
+}
+
 //***** PROJECTS PAGE *****//
 .projects-body {
     h1 {
@@ -554,6 +601,16 @@ img[src$="ns-icon.png"]:hover {
         }
     }
     //***** BLOG PAGE Mobile*****//
+    .blog-post {
+        justify-content: center;
+        .blog-content {
+            width: 100%;
+            min-width: 100px;
+        }
+        .blog-side-banner {
+            width: 100%;
+        }
+    }
     //***** PROJECTS PAGE Mobile*****//
     .projects-body {
         #project-h1 {

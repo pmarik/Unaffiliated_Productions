@@ -242,6 +242,47 @@ nav {
         align-items: center;
         text-align: center; }
 
+.blog-post {
+  color: #454545;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .blog-post .blog-content {
+    width: 75%;
+    min-width: 661px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    padding-bottom: 10px; }
+    .blog-post .blog-content .img-blog-wrap {
+      max-width: 650px;
+      min-width: 200px;
+      margin: auto;
+      position: relative; }
+      .blog-post .blog-content .img-blog-wrap img {
+        width: 100%;
+        height: auto;
+        background-image: url(../images/loader2.gif);
+        background-repeat: no-repeat;
+        background-position: center; }
+    .blog-post .blog-content a:link, .blog-post .blog-content a:visited {
+      color: #454545; }
+    .blog-post .blog-content a:hover, .blog-post .blog-content a:active {
+      color: #5F9EA0; }
+  .blog-post .blog-side-banner {
+    margin-top: 2%;
+    width: 25%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black; }
+
 .projects-body h1 {
   margin: 5% auto 2% auto;
   color: #454545; }
@@ -573,6 +614,15 @@ img[src$="ns-icon.png"]:hover {
           -ms-flex-align: center;
           align-items: center;
           text-align: center; }
+  .blog-post {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .blog-post .blog-content {
+      width: 100%;
+      min-width: 100px; }
+    .blog-post .blog-side-banner {
+      width: 100%; }
   .projects-body #project-h1 h1 {
     -webkit-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
