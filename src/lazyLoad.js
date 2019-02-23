@@ -15,8 +15,11 @@ export function lazyLoader() {
                     if (entry.isIntersecting) {
                         var image = entry.target;
                         image.src = image.dataset.src;
-                        image.classList.remove("lazy");
-                        imageObserver.unobserve(image);
+                        image.onload = () => {
+                            image.classList.remove("lazy");
+                            imageObserver.unobserve(image);
+                        }
+
                     }
                 });
             });
