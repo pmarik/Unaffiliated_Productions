@@ -263,6 +263,33 @@ nav {
     grid-column: 3 / 4;
 }
 
+//recent articles
+.recent-article {
+    margin-top: 50px;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: black;
+    padding-top: 40px;
+    .blog-content {
+        h1 {
+            font-size: 2em;
+            text-align: center;
+        }
+        .img-blog-wrap-main {
+            max-width: 600px;
+            max-width: 500px;
+            margin: 0 auto;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        a:link {
+            color: $selectedColor
+        }
+    }
+}
+
 //***** VIDEOS PAGE *****//
 #videos-header {
     margin: 0 auto;
@@ -306,6 +333,12 @@ nav {
         border-bottom-width: 1px;
         border-bottom-color: black;
         padding-bottom: 10px;
+        h1 {
+            font-size: 2.5em;
+        }
+        h3 {
+            font-size: 2em;
+        }
         .img-blog-wrap {
             max-width: 650px;
             min-width: 200px;
@@ -381,13 +414,19 @@ nav {
                 background-repeat: no-repeat;
                 background-position: center;
                 padding-bottom: 31%;
-                iframe,
-                img {
+                iframe {
                     position: absolute;
                     top: 0;
                     left: 0;
                     width: 100%;
                     height: 100%;
+                }
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: auto;
                 }
                 img:hover,
                 img:active {
@@ -467,6 +506,64 @@ nav {
 }
 
 //***** CONTACT PAGE *****//
+#contact-wrap {
+    h1 {
+        margin: 3% 0 1% 0;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        margin-bottom: 3%;
+        letter-spacing: 1px;
+        line-height: 150%;
+    }
+}
+
+//Form Styles
+#contact {
+    background-color: rgb(235, 235, 235);
+    width: 60%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px 0 $unaffiliatedColor;
+    fieldset {
+        padding: 1em;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        input {
+            width: 50%;
+            border: 1px solid $unaffiliatedColor;
+            border-radius: 5px;
+            height: 20px;
+        }
+        textarea {
+            width: 100%;
+            border: 1px solid $unaffiliatedColor;
+            border-radius: 5px;
+        }
+        button {
+            width: 30%;
+            border: 0;
+            height: 30px;
+            input {
+                height: 100%;
+                border-radius: 5px;
+                text-transform: uppercase;
+                width: 100%;
+                border: 0;
+                color: #fff;
+                background-color: $selectedColor;
+                &:hover {
+                    transition: background-color 0.5s ease-out;
+                    background: #FFF;
+                    color: $selectedColor;
+                }
+            }
+        }
+    }
+}
+
 //***** Footer *****//
 footer {
     border-top-style: solid;
@@ -476,7 +573,7 @@ footer {
     clear: both;
     width: 80%;
     transition: 0.4s;
-    margin: 10px auto;
+    margin: auto;
     text-align: center;
     padding: 1em 2em;
     .social-links {
@@ -756,9 +853,19 @@ img[src$="ns-icon.png"]:hover {
         }
     }
     //***** CONTACT PAGE Mobile*****//
+    #contact {
+        width: 95%;
+        fieldset {
+            width: 98%;
+            input {
+                width: 80%;
+            }
+        }
+    }
     //***** Footer Mobile*****//
     footer {
         width: 100%;
         transition: 0.4s;
+        margin: 10px auto;
     }
 }
