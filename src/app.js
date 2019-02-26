@@ -3,6 +3,7 @@ import { imgSlider } from './imageSlider.js';
 import { lazyLoader } from './lazyLoad.js';
 
 
+
 /**********************************
  * Nav resize on scroll
  * 
@@ -83,5 +84,65 @@ window.onscroll = window.onload = function() {
 }
 
 
+
 //Lazy load images
 lazyLoader();
+
+
+
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyBoKm6_UkuQyI_7pTGHFUwonVyzVcZ2aLQ",
+    authDomain: "unaffiliated-website-1e203.firebaseapp.com",
+    databaseURL: "https://unaffiliated-website-1e203.firebaseio.com",
+    projectId: "unaffiliated-website-1e203",
+    storageBucket: "unaffiliated-website-1e203.appspot.com",
+    messagingSenderId: "314020124017"
+};
+firebase.initializeApp(config);
+
+//Ref messages collection
+let messagesRef = firebase.database().ref('messages');
+
+//Listen for form submit
+document.getElementById('contact').addEventListener('submit', submitForm);
+
+
+//Submit form
+function submitForm(e) {
+    e.preventDefault();
+
+    //get values
+    let name = getInputVal('name');
+    let email = getInputVal('email');
+    let message = getInputVal('message');
+
+    //save message
+    saveMessage(name, email, message);
+
+    //show alert
+    document.getElementById('confirmation').style.display = 'block';
+
+    //hide alert after 5 seconds
+    setTimeout(function() {
+        document.getElementById('confirmation').style.display = 'none';
+    }, 5000);
+
+    //clear form
+    document.getElementById('contact').reset();
+}
+
+//Get form values
+function getInputVal(id) {
+    return document.getElementById(id).value;
+}
+
+//save message to firebase
+function saveMessage(name, email, message) {
+    let newMessageRef = messagesRef.push();
+    newMessageRef.set({
+        name: name,
+        email: email,
+        message: message
+    });
+}

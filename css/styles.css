@@ -41,6 +41,9 @@ li {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: "Yanone Kaffeesatz", sans-serif;
   background-color: white;
@@ -194,8 +197,32 @@ nav {
     z-index: 2;
     margin: 0 auto;
     letter-spacing: 3px; }
-    .video-wrap .video-content a {
-      text-decoration: none; }
+    .video-wrap .video-content p {
+      margin: 10px 0 0 0; }
+      .video-wrap .video-content p a {
+        text-decoration: none;
+        color: #454545; }
+        .video-wrap .video-content p a:link {
+          color: #454545; }
+        .video-wrap .video-content p a:hover {
+          color: #fff; }
+    .video-wrap .video-content button {
+      margin-top: 20px;
+      background-color: #454545;
+      border: 0;
+      border-radius: 20px;
+      height: 40px;
+      width: 150px; }
+      .video-wrap .video-content button a {
+        text-decoration: none;
+        color: #fff; }
+      .video-wrap .video-content button:hover {
+        -webkit-transition: 300ms ease-in;
+        -o-transition: 300ms ease-in;
+        transition: 300ms ease-in;
+        background-color: #fff; }
+        .video-wrap .video-content button:hover a {
+          color: #454545; }
 
 .fullscreen-video-wrap {
   position: absolute;
@@ -335,8 +362,12 @@ nav {
     .recent-article .blog-content .img-blog-wrap-main img {
       width: 100%;
       height: auto; }
-  .recent-article .blog-content a:link {
+  .recent-article .blog-content a {
     color: #454545; }
+    .recent-article .blog-content a:link {
+      color: #454545; }
+    .recent-article .blog-content a:hover {
+      color: #5F9EA0; }
 
 #videos-header {
   margin: 0 auto;
@@ -438,7 +469,20 @@ nav {
 
 .projects-body #project-p {
   text-align: center;
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  line-height: 150%; }
+  .projects-body #project-p a {
+    text-decoration: none;
+    color: #454545;
+    -webkit-box-shadow: 0px 2px #5F9EA0;
+    box-shadow: 0px 2px #5F9EA0; }
+    .projects-body #project-p a:hover {
+      color: #5F9EA0;
+      -webkit-transition: 200ms ease-in;
+      -o-transition: 200ms ease-in;
+      transition: 200ms ease-in;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
 
 .projects-body #projects-grid {
   margin: 0% auto 5% auto; }
@@ -572,7 +616,8 @@ nav {
     #contact fieldset button {
       width: 30%;
       border: 0;
-      height: 30px; }
+      height: 30px;
+      background-color: #ebebeb; }
       #contact fieldset button input {
         height: 100%;
         border-radius: 5px;
@@ -587,6 +632,16 @@ nav {
           transition: background-color 0.5s ease-out;
           background: #FFF;
           color: #454545; }
+        #contact fieldset button input:active {
+          height: 90%;
+          width: 90%;
+          font-size: 0.8em; }
+
+#confirmation {
+  text-align: center;
+  font-size: 1.2em;
+  background: #79c879;
+  display: none; }
 
 footer {
   border-top-style: solid;
@@ -651,8 +706,8 @@ img[src$="ns-icon.png"]:hover {
     header .nav-container .logo-container a .main-logo {
       width: 200px;
       height: 40px; }
-      header .nav-container .logo-container a .main-logo:hover {
-        opacity: 0; }
+      header .nav-container .logo-container a .main-logo:hover, header .nav-container .logo-container a .main-logo:active {
+        opacity: 0.5; }
   #nav-toggle {
     background: transparent;
     position: absolute;

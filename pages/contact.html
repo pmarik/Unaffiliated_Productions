@@ -17,6 +17,7 @@
 
     <link href="../css/styles.css" type="text/css" rel="stylesheet">
 
+    <script defer src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script defer src="../dist/bundle.js" type="text/javascript"></script>
 
 </head>
@@ -60,14 +61,16 @@
                         <input id="email" name="email" placeholder=" Your Email Address" type="email" tabindex="2" required>
                     </fieldset>
                     <fieldset>
-                        <textarea name="message" placeholder=" Type Your Message Here...." rows="7" required></textarea>
+                        <textarea id="message" name="message" placeholder=" Type Your Message Here...." rows="7" required></textarea>
                     </fieldset>
                     <fieldset>
                         <button>
                             <input type="submit" value="Submit"  name="submit" />
                         </button>
                     </fieldset>
+                    <div id="confirmation">*Thank you, your message has been sent!</div>
                 </form>
+
 
             </div>
 
