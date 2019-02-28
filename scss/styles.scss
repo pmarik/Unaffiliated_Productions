@@ -29,7 +29,6 @@ header {
 }
 
 .verticalAnimate {
-    //transition: $navAnimation4;
     background-color: $unaffiliatedColor;
     box-shadow: 0 4px 2px -2px gray;
 }
@@ -209,6 +208,7 @@ nav {
 //body of home:
 .main-home {
     color: $selectedColor;
+    padding: 0 2%;
 }
 
 //Latest video selector:
@@ -359,6 +359,7 @@ nav {
 
 //***** BLOG PAGE *****//
 .blog-post {
+    padding: 0 2%;
     color: $selectedColor;
     margin-top: 2%;
     margin-bottom: 4%;
@@ -413,6 +414,7 @@ nav {
 
 //***** PROJECTS PAGE *****//
 .projects-body {
+    padding: 0 20px;
     h1 {
         margin: 5% auto 2% auto;
         color: $selectedColor;
@@ -903,7 +905,7 @@ img[src$="ns-icon.png"]:hover {
             min-height: 179px;
         }
         .video-description {
-            min-width: 400px;
+            min-width: 300px;
             text-align: center;
             margin-bottom: 10px;
         }
@@ -911,9 +913,16 @@ img[src$="ns-icon.png"]:hover {
     //***** ABOUT PAGE Mobile******//
     .about-body {
         text-align: center;
+        width: 100%;
         #about-banner {
             width: 100%;
             height: auto;
+        }
+        .sponsors-container {
+            img[src="../images/NorthPull.png"] {
+                width: 100%;
+                height: auto;
+            }
         }
     }
     //***** CONTACT PAGE Mobile*****//

@@ -1,5 +1,5 @@
 "use strict";
-import { imgSlider } from './imageSlider.js';
+import { imgSliderInit } from './imageSlider.js';
 import { lazyLoader } from './lazyLoad.js';
 
 
@@ -16,6 +16,7 @@ const checkVideo = document.getElementsByClassName('wrapper')[0].childNodes;
 let videoHeight = 0;
 if (checkVideo[1].className == "video-wrap") {
     videoHeight = document.getElementsByClassName('video-wrap')[0].clientHeight;
+
 }
 
 videoHeight -= 70;
@@ -52,9 +53,14 @@ window.onresize = window.onload = function() {
             slider[i].style.display = 'block';
 
         }
+
+        if (checkVideo[1].className == "video-wrap") {
+            videoHeight = document.getElementsByClassName('video-wrap')[0].clientHeight - 80;
+        }
     } else {
         //add image slider with smaller viewport size
-        imgSlider();
+        imgSliderInit();
+
         if (checkVideo[1].className == "video-wrap") {
             videoHeight = document.getElementsByClassName('video-wrap')[0].clientHeight - 80;
         }
@@ -63,7 +69,7 @@ window.onresize = window.onload = function() {
 
 
 if (window.innerWidth < 939) {
-    imgSlider();
+    imgSliderInit();
 }
 
 
@@ -74,6 +80,7 @@ if (window.innerWidth < 939) {
 
 window.onscroll = window.onload = function() {
     scrollHeight = this.scrollY;
+
     if (scrollHeight > videoHeight) {
         animatedHeader.classList.add('verticalAnimate');
     }
@@ -87,62 +94,3 @@ window.onscroll = window.onload = function() {
 
 //Lazy load images
 lazyLoader();
-
-
-
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyBoKm6_UkuQyI_7pTGHFUwonVyzVcZ2aLQ",
-    authDomain: "unaffiliated-website-1e203.firebaseapp.com",
-    databaseURL: "https://unaffiliated-website-1e203.firebaseio.com",
-    projectId: "unaffiliated-website-1e203",
-    storageBucket: "unaffiliated-website-1e203.appspot.com",
-    messagingSenderId: "314020124017"
-};
-firebase.initializeApp(config);
-
-//Ref messages collection
-let messagesRef = firebase.database().ref('messages');
-
-//Listen for form submit
-document.getElementById('contact').addEventListener('submit', submitForm);
-
-
-//Submit form
-function submitForm(e) {
-    e.preventDefault();
-
-    //get values
-    let name = getInputVal('name');
-    let email = getInputVal('email');
-    let message = getInputVal('message');
-
-    //save message
-    saveMessage(name, email, message);
-
-    //show alert
-    document.getElementById('confirmation').style.display = 'block';
-
-    //hide alert after 5 seconds
-    setTimeout(function() {
-        document.getElementById('confirmation').style.display = 'none';
-    }, 5000);
-
-    //clear form
-    document.getElementById('contact').reset();
-}
-
-//Get form values
-function getInputVal(id) {
-    return document.getElementById(id).value;
-}
-
-//save message to firebase
-function saveMessage(name, email, message) {
-    let newMessageRef = messagesRef.push();
-    newMessageRef.set({
-        name: name,
-        email: email,
-        message: message
-    });
-}

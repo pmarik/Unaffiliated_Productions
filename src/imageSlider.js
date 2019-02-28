@@ -4,7 +4,12 @@
  * Used on the Videos Page for mobile
  * navigation to select video playlist
  **************************************/
-export function imgSlider() {
+
+
+
+
+function imgSlider() {
+
     let sliderImages = document.querySelectorAll('.slide');
     let arrowLeft = document.querySelector('#arrow-left');
     let arrowRight = document.querySelector('#arrow-right');
@@ -65,4 +70,13 @@ export function imgSlider() {
         slideRight();
     });
     startSlide();
+}
+
+export function imgSliderInit() {
+    let checkSlide = document.getElementsByClassName('wrapper')[0].childNodes;
+
+    //check page is a video page to call the slider
+    if (checkSlide[1].className == "video-page") {
+        imgSlider();
+    }
 }
