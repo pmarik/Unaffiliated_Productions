@@ -859,7 +859,7 @@ img[src$="ns-icon.png"]:hover {
         #arrow-left {
             border-width: 12px 20px 12px 0;
             border-color: transparent $selectedColor transparent transparent;
-            left: 30px;
+            left: 7%;
             margin-left: 2%;
             &:hover {
                 opacity: 0.5;
@@ -871,7 +871,7 @@ img[src$="ns-icon.png"]:hover {
         #arrow-right {
             border-width: 12px 0 12px 20px;
             border-color: transparent transparent transparent $selectedColor;
-            right: 30px;
+            right: 7%;
             margin-right: 2%;
             &:hover {
                 opacity: 0.5;
@@ -989,6 +989,18 @@ img[src$="ns-icon.png"]:hover {
                 .video-description {
                     text-align: left;
                 }
+            }
+        }
+    }
+    .about-body {
+        h4 {
+            text-align: left;
+        }
+    }
+    .projects-body {
+        #project-p {
+            p {
+                text-align: left;
             }
         }
     }

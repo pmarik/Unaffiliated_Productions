@@ -850,7 +850,7 @@ img[src$="ns-icon.png"]:hover {
     #videos-header #arrow-left {
       border-width: 12px 20px 12px 0;
       border-color: transparent #454545 transparent transparent;
-      left: 30px;
+      left: 7%;
       margin-left: 2%; }
       #videos-header #arrow-left:hover {
         opacity: 0.5; }
@@ -859,7 +859,7 @@ img[src$="ns-icon.png"]:hover {
     #videos-header #arrow-right {
       border-width: 12px 0 12px 20px;
       border-color: transparent transparent transparent #454545;
-      right: 30px;
+      right: 7%;
       margin-right: 2%; }
       #videos-header #arrow-right:hover {
         opacity: 0.5; }
@@ -955,4 +955,8 @@ img[src$="ns-icon.png"]:hover {
     .video-wrap .video-content h1::after {
       display: none; }
   .projects-body #projects-grid .project .video-description {
+    text-align: left; }
+  .about-body h4 {
+    text-align: left; }
+  .projects-body #project-p p {
     text-align: left; } }
