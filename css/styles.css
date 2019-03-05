@@ -196,6 +196,13 @@ nav {
     z-index: 2;
     margin: 0 auto;
     letter-spacing: 3px; }
+    .video-wrap .video-content h1 {
+      display: inline; }
+      .video-wrap .video-content h1::after {
+        display: inline;
+        content: " |"; }
+      .video-wrap .video-content h1:last-of-type::after {
+        display: none; }
     .video-wrap .video-content p {
       margin: 10px 0 0 0; }
       .video-wrap .video-content p a {
@@ -205,23 +212,27 @@ nav {
           color: #454545; }
         .video-wrap .video-content p a:hover {
           color: #fff; }
+    .video-wrap .video-content a {
+      text-decoration: none; }
     .video-wrap .video-content button {
       margin-top: 20px;
       background-color: #454545;
+      color: #fff;
       border: 0;
       border-radius: 20px;
       height: 40px;
-      width: 150px; }
-      .video-wrap .video-content button a {
-        text-decoration: none;
-        color: #fff; }
+      width: 150px;
+      border: none; }
+      .video-wrap .video-content button:active {
+        border: none;
+        border: 0; }
       .video-wrap .video-content button:hover {
         -webkit-transition: 300ms ease-in;
         -o-transition: 300ms ease-in;
         transition: 300ms ease-in;
-        background-color: #fff; }
-        .video-wrap .video-content button:hover a {
-          color: #454545; }
+        background-color: #fff;
+        color: #454545;
+        cursor: pointer; }
 
 .fullscreen-video-wrap {
   position: absolute;
@@ -450,6 +461,9 @@ nav {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: black; }
+    .blog-post .blog-side-banner:last-of-type {
+      border-bottom-style: none;
+      border-bottom-width: 0; }
 
 .projects-body {
   padding: 0 20px; }
@@ -524,7 +538,8 @@ nav {
         width: 44%;
         padding: 0 3%; }
         .projects-body #projects-grid .project .video-description a {
-          text-decoration: none; }
+          text-decoration: none;
+          color: #454545; }
           .projects-body #projects-grid .project .video-description a:visited {
             color: #454545; }
           .projects-body #projects-grid .project .video-description a:hover {
@@ -594,9 +609,10 @@ nav {
 
 #contact {
   background-color: #ebebeb;
+  border-radius: 50px;
   width: 60%;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   -webkit-box-shadow: 0 0 20px 0 #5F9EA0;
   box-shadow: 0 0 20px 0 #5F9EA0; }
   #contact fieldset {
@@ -636,6 +652,9 @@ nav {
           height: 90%;
           width: 90%;
           font-size: 0.8em; }
+
+.g-recaptcha div {
+  margin: 0 auto; }
 
 #confirmation {
   text-align: center;
@@ -759,8 +778,8 @@ img[src$="ns-icon.png"]:hover {
   nav {
     overflow: auto;
     position: absolute;
-    width: 30%;
-    min-width: 25%;
+    width: 38%;
+    max-width: 250px;
     top: 50px;
     right: 0;
     -webkit-transition: all 0.5s ease-in-out;
@@ -831,7 +850,7 @@ img[src$="ns-icon.png"]:hover {
     #videos-header #arrow-left {
       border-width: 12px 20px 12px 0;
       border-color: transparent #454545 transparent transparent;
-      left: 0;
+      left: 30px;
       margin-left: 2%; }
       #videos-header #arrow-left:hover {
         opacity: 0.5; }
@@ -840,7 +859,7 @@ img[src$="ns-icon.png"]:hover {
     #videos-header #arrow-right {
       border-width: 12px 0 12px 20px;
       border-color: transparent transparent transparent #454545;
-      right: 0;
+      right: 30px;
       margin-right: 2%; }
       #videos-header #arrow-right:hover {
         opacity: 0.5; }
@@ -927,3 +946,11 @@ img[src$="ns-icon.png"]:hover {
     -o-transition: 0.4s;
     transition: 0.4s;
     margin: 10px auto; } }
+
+@media only screen and (max-width: 480px) {
+  .video-wrap .video-content h1 {
+    display: block;
+    text-align: left;
+    word-spacing: 100px; }
+    .video-wrap .video-content h1::after {
+      display: none; } }

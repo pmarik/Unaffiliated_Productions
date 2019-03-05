@@ -157,6 +157,17 @@ nav {
         z-index: 2;
         margin: 0 auto;
         letter-spacing: 3px;
+        h1 {
+            //background-color: pink;
+            display: inline;
+            &::after {
+                display: inline;
+                content: " |";
+            }
+            &:last-of-type::after {
+                display: none;
+            }
+        }
         p {
             margin: 10px 0 0 0;
             a {
@@ -170,23 +181,27 @@ nav {
                 }
             }
         }
+        a {
+            text-decoration: none;
+        }
         button {
             margin-top: 20px;
             background-color: $selectedColor;
+            color: #fff;
             border: 0;
             border-radius: 20px;
             height: 40px;
             width: 150px;
-            a {
-                text-decoration: none;
-                color: #fff;
+            border: none;
+            &:active {
+                border: none;
+                border: 0;
             }
             &:hover {
                 transition: 300ms ease-in;
                 background-color: #fff;
-                a {
-                    color: $selectedColor;
-                }
+                color: $selectedColor;
+                cursor: pointer;
             }
         }
     }
@@ -409,6 +424,10 @@ nav {
         border-bottom-style: solid;
         border-bottom-width: 1px;
         border-bottom-color: black;
+        &:last-of-type {
+            border-bottom-style: none;
+            border-bottom-width: 0;
+        }
     }
 }
 
@@ -490,6 +509,7 @@ nav {
                 padding: 0 3%;
                 a {
                     text-decoration: none;
+                    color: $selectedColor;
                     &:visited {
                         color: $selectedColor;
                     }
@@ -574,9 +594,10 @@ nav {
 //Form Styles
 #contact {
     background-color: rgb(235, 235, 235);
+    border-radius: 50px;
     width: 60%;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     box-shadow: 0 0 20px 0 $unaffiliatedColor;
     fieldset {
         padding: 1em;
@@ -619,6 +640,12 @@ nav {
                 }
             }
         }
+    }
+}
+
+.g-recaptcha {
+    div {
+        margin: 0 auto;
     }
 }
 
@@ -749,8 +776,8 @@ img[src$="ns-icon.png"]:hover {
     nav {
         overflow: auto;
         position: absolute;
-        width: 30%;
-        min-width: 25%;
+        width: 38%;
+        max-width: 250px;
         //height: calc(80vh - 80px);
         top: 50px;
         right: 0;
@@ -832,7 +859,7 @@ img[src$="ns-icon.png"]:hover {
         #arrow-left {
             border-width: 12px 20px 12px 0;
             border-color: transparent $selectedColor transparent transparent;
-            left: 0;
+            left: 30px;
             margin-left: 2%;
             &:hover {
                 opacity: 0.5;
@@ -844,7 +871,7 @@ img[src$="ns-icon.png"]:hover {
         #arrow-right {
             border-width: 12px 0 12px 20px;
             border-color: transparent transparent transparent $selectedColor;
-            right: 0;
+            right: 30px;
             margin-right: 2%;
             &:hover {
                 opacity: 0.5;
@@ -940,5 +967,20 @@ img[src$="ns-icon.png"]:hover {
         width: 100%;
         transition: 0.4s;
         margin: 10px auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .video-wrap {
+        .video-content {
+            h1 {
+                display: block;
+                text-align: left;
+                word-spacing: 100px;
+                &::after {
+                    display: none;
+                }
+            }
+        }
     }
 }

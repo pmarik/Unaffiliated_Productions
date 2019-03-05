@@ -51,7 +51,7 @@
                 <h1>How can we help you create?</h1>
                 <p>Unaffiliated Productions specializes in concept formation for action sports and adventurous businesses. Whether it is showcasing your physical product or creating a compeling narrative to tell your story, we collaborate with you to showcase
                     your brand in the best light by optimizing its visual appeal. </p>
-                <form id="contact" action="###" method="post">
+                <form id="contact" data-netlify="true" method="post">
 
                     <fieldset>
                         <input id="name" name="name" placeholder=" Your Name" type="text" required autofocus>
@@ -63,10 +63,14 @@
                         <textarea id="message" name="message" placeholder=" Type Your Message Here...." rows="7" required></textarea>
                     </fieldset>
                     <fieldset>
+                        <div data-netlify-recaptcha="true"></div>
+                    </fieldset>
+                    <fieldset>
                         <button>
                             <input type="submit" value="submit"  name="submit" />
                         </button>
                     </fieldset>
+
                     <div id="confirmation">*Thank you, your message has been sent!</div>
                 </form>
 
