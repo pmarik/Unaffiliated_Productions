@@ -953,4 +953,6 @@ img[src$="ns-icon.png"]:hover {
     text-align: left;
     word-spacing: 100px; }
     .video-wrap .video-content h1::after {
-      display: none; } }
+      display: none; }
+  .projects-body #projects-grid .project .video-description {
+    text-align: left; } }

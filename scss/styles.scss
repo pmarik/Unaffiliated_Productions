@@ -983,4 +983,13 @@ img[src$="ns-icon.png"]:hover {
             }
         }
     }
+    .projects-body {
+        #projects-grid {
+            .project {
+                .video-description {
+                    text-align: left;
+                }
+            }
+        }
+    }
 }
