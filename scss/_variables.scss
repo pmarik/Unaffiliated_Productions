@@ -1,4 +1,6 @@
-$unaffiliatedColor: #5F9EA0;
+$unaffiliatedColor: #79ADAF; //#5F9EA0;
+//text color
+$altUnafColor: #395E60;
 //Website continuous font:
 $unaffiliatedFont: 'Yanone Kaffeesatz',
 sans-serif;
@@ -7,7 +9,7 @@ $backgrndColor: rgb(255, 255, 255);
 //nav color:
 $headerFooterColor: hsla(182, 25%, 50%, 0.3);
 //selected nav color:
-$selectedColor: hsla(20, 0%, 27%, 1);
+$selectedColor: #383838;
 //animation timing 1:
 $animation1: all 0.2s ease-in-out;
 //Nav animation first timing:
