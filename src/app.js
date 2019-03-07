@@ -1,33 +1,21 @@
 "use strict";
-import { imgSliderInit } from './imageSlider.js';
+import { imgSlider } from './imageSlider.js';
 import { lazyLoader } from './lazyLoad.js';
 
 
 
-/**********************************
- * Nav resize on scroll
- * 
- * 
- * *******************************/
-//toggle animated nav when scrolling vertically
-let scrollHeight;
-let animatedHeader = document.getElementsByTagName('header')[0];
-const checkVideo = document.getElementsByClassName('wrapper')[0].childNodes;
+
+//Get the client's viewport height for home page header animation
 let videoHeight = 0;
-if (checkVideo[1].className == "video-wrap") {
+try {
     videoHeight = document.getElementsByClassName('video-wrap')[0].clientHeight;
-
+} catch (err) {
+    //not on home page
 }
-
 videoHeight -= 70;
-//readjust scroll measurement when resizing window for nav bar
 
-/**************************************
- * Navigation animations for full 
- * screen and mobile with burger menu
- * 
- **************************************/
-// burger animation toggle
+
+/***** Navigation animations for full screen and mobile with burger menu *****/
 const burger = document.getElementsByTagName('nav')[0];
 document.querySelector("#nav-toggle")
     .addEventListener("click", function() {
@@ -35,10 +23,12 @@ document.querySelector("#nav-toggle")
         burger.classList.toggle('visibleNav');
     });
 
-/* ALL ON WINDOW RESIZE EVENTS *****************
- *
- ***********************************************/
 
+/* ALL ON WINDOW RESIZE EVENTS *****************
+ * Toggle Burger Nav
+ * Toggle img slider on videos page
+ * Toggle nav bar animation on home page
+ ***********************************************/
 let width;
 window.onresize = window.onload = function() {
     width = this.innerWidth;
@@ -51,32 +41,32 @@ window.onresize = window.onload = function() {
         let slider = document.querySelectorAll('.slide');
         for (let i = 0; i < slider.length; i++) {
             slider[i].style.display = 'block';
-
         }
 
-        if (checkVideo[1].className == "video-wrap") {
+        try {
             videoHeight = document.getElementsByClassName('video-wrap')[0].clientHeight - 80;
+        } catch (err) {
+            //not on home page
         }
     } else {
-        //add image slider with smaller viewport size
-        imgSliderInit();
-
-        if (checkVideo[1].className == "video-wrap") {
+        try {
             videoHeight = document.getElementsByClassName('video-wrap')[0].clientHeight - 80;
+        } catch (err) {
+            //not on home page
+        }
+        //add image slider with smaller viewport size
+        try {
+            imgSlider();
+        } catch (err) {
+            //slider not on page
         }
     }
 }
 
 
-if (window.innerWidth < 939) {
-    imgSliderInit();
-}
-
-
-
-/* ALL ON SCROLL EVENTS ************************
- *
- ***********************************************/
+/***** Add animation to sticky header when vertically scrolling *****/
+let scrollHeight;
+let animatedHeader = document.getElementsByTagName('header')[0];
 
 window.onscroll = window.onload = function() {
     scrollHeight = this.scrollY;
@@ -87,10 +77,27 @@ window.onscroll = window.onload = function() {
     if (scrollHeight < videoHeight) {
         animatedHeader.classList.remove('verticalAnimate');
     }
-
 }
 
+
+//reset the img slider when on smaller screen
+if (window.innerWidth < 939) {
+    try {
+        imgSlider();
+    } catch (err) {
+        //slider not on page
+    }
+}
 
 
 //Lazy load images
 lazyLoader();
+
+//remove home page video from view on loads
+let navCollection = document.getElementsByTagName('li')
+let vidWrap = document.getElementsByClassName('fullscreen-video-wrap')[0];
+for (let i = 0; i < navCollection.length; i++) {
+    navCollection[i].addEventListener('click', function() {
+        vidWrap.style.display = "none";
+    });
+}
