@@ -22,6 +22,9 @@ export function lazyLoader() {
 
                     }
                 });
+            }, {
+                root: document.querySelector("#container"),
+                rootMargin: "0px 0px 500px 0px"
             });
 
             lazyloadImages.forEach(function(image) {
@@ -39,7 +42,7 @@ export function lazyLoader() {
                 lazyloadThrottleTimeout = setTimeout(function() {
                     var scrollTop = window.pageYOffset;
                     lazyloadImages.forEach(function(img) {
-                        if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                        if (img.offsetTop < (window.innerHeight + scrollTop + 500)) {
                             img.src = img.dataset.src;
                             img.classList.remove('lazy');
                         }

@@ -1041,11 +1041,23 @@ img[src$="ns-icon.png"]:hover {
         img{
             height: 100%;
             width: auto;
-            padding: 10px 0;
+            padding-top: 60px;
+            top: 50%;
+
+        }
+    }
+    .video-wrap {
+    
+        .video-overlay {
+            background: rgb(121,173,175);
+            background: linear-gradient(93deg, rgba(121,173,175,1) 10%, rgba(96,157,159,0.15) 40%, rgba(96,157,159,0.15199583251269255) 60%, rgba(121,173,175,1) 90%),
+                        linear-gradient(to top, $unaffiliatedColor, 20%, hsla(182, 25%, 50%, 0.8), $unaffiliatedColor);
 
         }
     }
 }
+
+
 
 .fullscreen-video-wrap img {
 

@@ -993,7 +993,13 @@ img[src$="ns-icon.png"]:hover {
   .fullscreen-video-wrap img {
     height: 100%;
     width: auto;
-    padding: 10px 0; } }
+    padding-top: 60px;
+    top: 50%; }
+  .video-wrap .video-overlay {
+    background: #79adaf;
+    background: -webkit-linear-gradient(357deg, #79adaf 10%, rgba(96, 157, 159, 0.15) 40%, rgba(96, 157, 159, 0.151996) 60%, #79adaf 90%), -webkit-linear-gradient(bottom, #79ADAF, 20%, rgba(96, 157, 159, 0.8), #79ADAF);
+    background: -o-linear-gradient(357deg, #79adaf 10%, rgba(96, 157, 159, 0.15) 40%, rgba(96, 157, 159, 0.151996) 60%, #79adaf 90%), -o-linear-gradient(bottom, #79ADAF, 20%, rgba(96, 157, 159, 0.8), #79ADAF);
+    background: linear-gradient(93deg, #79adaf 10%, rgba(96, 157, 159, 0.15) 40%, rgba(96, 157, 159, 0.151996) 60%, #79adaf 90%), linear-gradient(to top, #79ADAF, 20%, rgba(96, 157, 159, 0.8), #79ADAF); } }
 
 .fullscreen-video-wrap img {
   -webkit-animation: fadein 2s;
