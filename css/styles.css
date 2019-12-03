@@ -504,6 +504,8 @@ nav {
   .projects-body #projects-grid {
     margin: 0% auto 5% auto; }
     .projects-body #projects-grid .project {
+      width: 100%;
+      height: 100%;
       margin: 5% auto;
       display: -webkit-box;
       display: -ms-flexbox;
