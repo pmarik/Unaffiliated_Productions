@@ -1085,6 +1085,9 @@ img[src$="ns-icon.png"]:hover {
     -o-transition: opacity 0s;
     transition: opacity 0s; }
 
+.projects-body #projects-grid #modal .modal-inner .project .video-wrapper {
+  background-image: none; }
+
 .modal-show.modal .modal-inner {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
