@@ -94,22 +94,36 @@
             <div class="projects-body">
                 <div id="projects-grid">
 
-                        <div class="project">
-                                <div class="video-wrapper">
-                                    <a href="https://vimeo.com/299307229"  target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" src="../images/box-set-thumbnail.jpg" alt="Box Set | Full Movie"></a>
-                                </div>
-                                <div class="video-description">
-                                    <h1><a href="https://vimeo.com/299307229" target="_blank" rel="noopener" rel="noreferrer">Box Set | Full Movie</a></h1>
-                                    Follow the lost tapes of the crew from urban adventures across the Midwest to the high flying action on Mt. Hood. 
+                        <!-- modal target -->
+                        <div id="modal" class="modal">
+                            <div class="modal-inner" id="modal-inner">
+                            <div class="project">
+                                <div class="video-wrapper" id="video-target"></div>
+                                <div class="close-space">
+                                    <button id="close-modal">&times</button>
                                 </div>
                             </div>
+                            </div>
+                        </div>
+
+                        <!-- ********************** begin videos list *********************** -->
+
+                        <div class="project">
+                            <div class="video-wrapper">
+                                <button class="open" type="button" aria-hidden="true" data-iframe="https://player.vimeo.com/video/299307229" data-vidplayer="vimeo"><img width="600" height="300" src="../images/box-set-thumbnail.jpg" alt="Box Set | Full Movie"/></button>
+                            </div>
+                            <div class="video-description">
+                                <button class="open" type="button" aria-hidden="true" data-iframe="https://player.vimeo.com/video/299307229" data-vidplayer="vimeo">Box Set | Full Movie</button>
+                                Follow the lost tapes of the crew from urban adventures across the Midwest to the high flying action on Mt. Hood. 
+                            </div>
+                        </div>
 
                         <div class="project">
                                 <div class="video-wrapper">
-                                    <a href="https://www.youtube.com/watch?v=c4h9Ut-UIlY&t=1s" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" src="../images/pm-boxset-coverr.png" alt="Paul Marik | Box Set Full Part"></a>
+                                    <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/c4h9Ut-UIlY" data-vidplayer="youtube"><img width="600" height="300" src="../images/pm-boxset-coverr.png" alt="Paul Marik | Box Set Full Part"/></button>
                                 </div>
                                 <div class="video-description">
-                                    <h1><a href="https://www.youtube.com/watch?v=c4h9Ut-UIlY&t=1s" target="_blank" rel="noopener" rel="noreferrer">Paul Marik | Box Set Full Part</a></h1>
+                                    <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/c4h9Ut-UIlY" data-vidplayer="youtube">Paul Marik | Box Set Full Part</button>
                                     <p>A compilation of Street shots from Unaffiliated's latest movie Box Set.</p>
                                 </div>
                         </div>
@@ -667,7 +681,95 @@
                 </p>
             </div>
         </footer>
-</body>
+
+        <script>
+                    function addVimeoPlayer(videoLink, vidTarget){
+                        let modalVid = document.createElement('iframe');
+                        modalVid.src = videoLink;
+                        modalVid.width = 640;
+                        modalVid.height = 360;
+                        modalVid.frameBorder = '0';
+                        modalVid.allow = "autoplay; fullscreen";
+                        modalVid.allowFullscreen = true;
+
+                        vidTarget.appendChild(modalVid)
+                    }
+
+                    function addYtPlayer(videoLink, vidTarget){
+                        let modalVid = document.createElement('iframe');
+                        modalVid.src= videoLink;
+                        modalVid.width = 560;
+                        modalVid.height = 315;
+                        modalVid.frameBorder = '0';
+                        modalVid.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+                        modalVid.allowFullscreen = true;
+
+                        vidTarget.appendChild(modalVid);
+                    }
+
+                    const vidTarget = document.getElementById('video-target');
+
+                    function openModal(modal, videoLink, videoPlayer) {
+                        // Note: fixed elements will also need the margin 
+                        // adjustment (like a fixed header, if you have one).
+
+                        if(videoPlayer === "youtube"){
+                            addYtPlayer(videoLink, vidTarget);
+                        }
+                        else{
+                            addVimeoPlayer(videoLink, vidTarget);
+                        }
+
+                        modal.classList.add('modal-show');
+                        var scrollBarWidth = window.innerWidth - document.body.offsetWidth;
+                        document.body.style.margin = '0px ' + scrollBarWidth + 'px 0px 0px';
+                        document.body.style.overflow = 'hidden';
+                        modal.style.overflowY = "visible";
+                    };
+                    
+                    function closeModal(modal) {
+                        vidTarget.removeChild(vidTarget.childNodes[0]);
+                        document.body.style.margin = '';
+                        document.body.style.overflow = '';
+                        modal.classList.remove('modal-show');
+                        modal.style.overflow = "hidden";
+                    };
+                    
+                    let modal = document.getElementById('modal');
+                    let closeModalBtn = document.getElementById('close-modal');
+                    let innerModal = document.getElementById('modal-inner');
+
+                    closeModalBtn.addEventListener('click', function(){
+                        closeModal(modal);
+                    });
+                    
+                    // Clicking outside the inner modal content should close it.
+                    modal.addEventListener('click', function () {
+                        closeModal(modal);
+                    });
+
+                    innerModal.addEventListener('click', function () {
+                        closeModal(modal);
+                    });
+
+                    for (var i = 0; i <  modal.childNodes.length; i++) {
+                        modal.childNodes[i].addEventListener('click', function (event) {
+                            event.stopPropagation();
+                        });
+                    }
+
+                    let openModalElements = document.getElementsByClassName('open');
+
+                    // Open the modal when open button is pressed.
+                    for(let i = 0; i < openModalElements.length; i++){
+                        openModalElements[i].addEventListener('click', function(e){
+                            e.preventDefault;
+                            openModal(modal, openModalElements[i].dataset.iframe, openModalElements[i].dataset.vidplayer);
+                        })
+                    }
+                   
+        </script>
+</body> 
 
 
 
