@@ -66,11 +66,12 @@ nav {
         width: 100%;
         li {
             flex-grow: 1;
-            a {
+            a {   
                 height: 50px;
                 line-height: 50px;
                 padding: 0 20px;
                 color: $selectedColor;
+                color: rgb(75, 75, 75);
                 letter-spacing: 2px;
                 text-decoration: none;
                 border-radius: 5px;
@@ -169,8 +170,11 @@ nav {
             }
         }
         p {
+            letter-spacing: 0.08em;
             margin: 10px 0 0 0;
             a {
+                font-family: 'Lato', sans-serif; 
+                font-weight: bold;
                 text-decoration: none;
                 color: $selectedColor;
                 &:link {
@@ -460,7 +464,7 @@ nav {
     }
     #project-p {
         text-align: center;
-        font-size: 1.3em;
+        font-size: 1em;
         line-height: 150%;
         a {
             text-decoration: none;
@@ -546,13 +550,14 @@ nav {
         height: auto;
     }
     h4 {
+        font-family: 'Lato', sans-serif; 
+        font-weight: bold; 
+        color: #4d4d4d;
         margin: 5% auto 10% auto;
         width: 80%;
         text-align: center;
-        font-size: 1.2em;
-        line-height: 1.3em;
+        line-height: 1.4em;
         color: $selectedColor;
-        letter-spacing: 1px;
         a {
             text-decoration: none;
             color: $altUnafColor;
@@ -600,11 +605,11 @@ nav {
         }
     }
     p {
+        color: #4d4d4d;
         font-weight: bold;
         color: $selectedColor;
         text-align: center;
         margin-bottom: 3%;
-        letter-spacing: 1px;
         line-height: 150%;
     }
 }
@@ -612,11 +617,11 @@ nav {
 //Form Styles
 #contact {
     background-color: rgb(235, 235, 235);
-    border-radius: 50px;
+    border-radius: 10px;
     width: 60%;
     max-width: 900px;
     margin: 0 auto 50px auto;
-    box-shadow: 0 0 20px 0 $unaffiliatedColor;
+    box-shadow: 0 0 10px 0 $unaffiliatedColor;
     fieldset {
         padding: 1em;
         width: 90%;
@@ -646,10 +651,12 @@ nav {
                 border: 0;
                 color: #fff;
                 background-color: $selectedColor;
+
                 &:hover {
-                    transition: background-color 0.5s ease-out;
+                    transition: background-color 0.2s ease-out;
                     background: #FFF;
                     color: $selectedColor;
+                    cursor: pointer;
                 }
                 &:active {
                     height: 90%;
@@ -961,11 +968,18 @@ img[src$="ns-icon.png"]:hover {
         .video-wrapper {
             min-width: 320px;
             min-height: 179px;
+            width: 100%;
         }
         .video-description {
             min-width: 300px;
-            text-align: center;
+            width: 100%;
+            text-align: left;
             margin-bottom: 10px;
+            
+            
+            button{
+                margin: 20px auto 10px auto;
+            }
         }
     }
     //***** ABOUT PAGE Mobile******//
@@ -1250,9 +1264,20 @@ img[src$="ns-icon.png"]:hover {
 
 @media only screen and (max-width: 939px) {
  
-    #close-modal{
-       visibility: hidden;
-      }
+
+    .close-space{
+        position: relative;
+        top: 30px;
+        
+        #close-modal{
+            //visibility: hidden;
+            top: -60px;
+            left: 50%;
+            transform: translate(-50%);
+            position: fixed;
+           }
+    }
+    
 
       .modal-inner{
         margin-top: calc(100vh / 3 );
@@ -1260,3 +1285,15 @@ img[src$="ns-icon.png"]:hover {
     }
 
 }
+
+p {
+    font-family: 'Lato', sans-serif; 
+    font-weight: bold; 
+    color: #4d4d4d
+}
+
+footer p {
+    font-family: $unaffiliatedFont;
+}
+ 
+
