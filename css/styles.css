@@ -519,7 +519,7 @@ nav {
         position: relative;
         width: 55%;
         height: 100px;
-        background-image: url(../images/loader2.gif);
+        background-image: url(../images/backgroundLoader.svg);
         background-repeat: no-repeat;
         background-position: center;
         padding-bottom: 31%; }
@@ -1085,8 +1085,8 @@ img[src$="ns-icon.png"]:hover {
     -o-transition: opacity 0s;
     transition: opacity 0s; }
 
-.projects-body #projects-grid #modal .modal-inner .project .video-wrapper {
-  background-image: none; }
+.project.vid-modal {
+  margin: auto !important; }
 
 .modal-show.modal .modal-inner {
   -webkit-transform: scale(1);
@@ -1110,12 +1110,26 @@ img[src$="ns-icon.png"]:hover {
 
 .modal-inner {
   border-radius: 3px;
-  max-width: 80vw;
-  margin: 5% auto;
-  padding: 5px 20px; }
+  margin-top: calc(100vh / 4 - 5%); }
 
 .close-space {
-  margin-left: 10px; }
+  margin-left: 10px;
+  position: relative; }
+  .close-space button {
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+.lazy {
+  visibility: hidden; }
 
 /* So the scrollbar calculation is correct. */
 body {
@@ -1141,22 +1155,16 @@ body {
 .open:focus {
   outline: none; }
 
-b {
-  position: absolute;
-  color: white;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%; }
-
 #close-modal {
   font-size: 35px;
+  line-height: 35px;
   border: none;
   background: #fff;
   cursor: pointer;
   width: 40px;
-  border-radius: 100%; }
+  height: 40px;
+  border-radius: 100%;
+  position: absolute; }
 
 #close-modal:hover {
   color: red; }
@@ -1166,3 +1174,9 @@ b {
     -webkit-transition: none;
     -o-transition: none;
     transition: none; } }
+
+@media only screen and (max-width: 939px) {
+  #close-modal {
+    visibility: hidden; }
+  .modal-inner {
+    margin-top: calc(100vh / 3); } }

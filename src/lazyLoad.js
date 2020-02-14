@@ -17,6 +17,7 @@ export function lazyLoader() {
                         image.src = image.dataset.src;
                         image.onload = () => {
                             image.classList.remove("lazy");
+                            image.style.visibility = "visible";
                             imageObserver.unobserve(image);
                         }
 
