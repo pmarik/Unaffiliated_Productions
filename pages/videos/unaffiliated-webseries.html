@@ -94,10 +94,24 @@
             <div class="projects-body">
                 <div id="projects-grid">
 
+                    <!-- modal target -->
+                    <div id="modal" class="modal">
+                        <div class="modal-inner" id="modal-inner">
+                        <div class="project">
+                            <div class="video-wrapper" id="video-target"></div>
+                            <div class="close-space">
+                                <button id="close-modal">&times</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- ********************** begin videos list *********************** -->
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://www.newschoolers.com/videos/watch/825871/Unaffiliated-Ep-6--A-Search-for-Snow" target="_blank" rel="noopener" rel="noreferrer"> <img width="600" height="300" src="../../images/coverep6.jpg" alt="Unaffiliated Ep 6: A Search For Snow"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/br3UMDvz7sg" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/coverep6.jpg" alt="Unaffiliated Ep 6: A Search For Snow"></button>
                         </div>
                         <div class="video-description">
                             <h1><a href="https://www.newschoolers.com/videos/watch/825871/Unaffiliated-Ep-6--A-Search-for-Snow" target="_blank" rel="noopener" rel="noreferrer">Unaffiliated Ep 6: A Search for Snow</a></h1>
@@ -110,7 +124,8 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://www.newschoolers.com/videos/watch/821653/Unaffiliated-Ep-5--Local-s-Only" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" src="../../images/coverep5.jpg" alt="Unaffilaited Ep 5: Local's Only"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/1_r2lv15-30" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/coverep5.jpg" alt="Unaffiliated Ep 5: Local's Only"></button>
                         </div>
                         <div class="video-description">
                             <h1><a href="https://www.newschoolers.com/videos/watch/821653/Unaffiliated-Ep-5--Local-s-Only" target="_blank" rel="noopener" rel="noreferrer">Unaffiliated Ep 5: Local's Only</a></h1>
@@ -121,7 +136,8 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://www.newschoolers.com/videos/watch/815945/Unaffiliated-Ep-4--Back-to-the-Grind" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/coverep4.jpg" alt="Unaffiliated Ep 4: Back to the Grind"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/dVOuPrbBSuU" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/coverep4.jpg" alt="Unaffiliated Ep 4: Back to the Grind"></button>
                         </div>
                         <div class="video-description">
                             <h1><a href="https://www.newschoolers.com/videos/watch/815945/Unaffiliated-Ep-4--Back-to-the-Grind" target="_blank" rel="noopener" rel="noreferrer">Unaffiliated Ep 4: Back to the Grind</a></h1>
@@ -131,7 +147,8 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://www.newschoolers.com/videos/watch/808283/Unaffiliated-Ep--3---These-Aren-t-Landfills" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/coverep3.jpg" alt="Unaffiliated Ep 3: These Aren't Landfills"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/GhD8hWoW5b4" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/coverep3.jpg" alt="Unaffiliated Ep 3: These Aren't Landfills"></button>
                         </div>
                         <div class="video-description">
                             <h1><a href="https://www.newschoolers.com/videos/watch/808283/Unaffiliated-Ep--3---These-Aren-t-Landfills" target="_blank" rel="noopener" rel="noreferrer">Unaffiliated Ep 3: These Aren't Landfills</a></h1>
@@ -141,7 +158,8 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://www.newschoolers.com/videos/watch/806145/Unaffiliated-Ep--2---Some-Snow-Required" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/coverep2.jpg" alt="Unaffiliated Ep 2: Some Snow Required"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/zCqS_diAAGc" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/coverep2.jpg" alt="Unaffiliated Ep 2: Some Snow Required"></button>
                         </div>
                         <div class="video-description">
                             <h1><a href="https://www.newschoolers.com/videos/watch/806145/Unaffiliated-Ep--2---Some-Snow-Required" target="_blank" rel="noopener" rel="noreferrer">Unaffiliated Ep 2: Some Snow Required</a></h1>
@@ -151,30 +169,32 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/157636097" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/cover1.jpg" alt="Unaffiliated Ep 1: America's Dairyland"></a>
-                        </div>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/8SPRRttPmgc" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/cover1.jpg" alt="Unaffiliated Ep 1: America's Dairyland"></button>
+                                                </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/157636097" target="_blank" rel="noopener" rel="noreferrer">Unaffiliated Ep 1: America's Dairyland</a></h1>
+                            <h1><a href="https://www.newschoolers.com/videos/watch/801650/Unaffiliated-Ep-1--America-s-Dairyland" target="_blank" rel="noopener" rel="noreferrer">Unaffiliated Ep 1: America's Dairyland</a></h1>
                             <p>Wisconsin is having the worst preseason conditions ever! Edited by Seth Leinbach. Filmed by Seth Leinbach, Ryan Ruffing, Alex Havey and crew. Skiing by Seth Leinbach, Paul Marik, Conner Ross, Conner Easton, Ken Dozer, Jon Fox</p>
                         </div>
                     </div>
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/157653116" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/Mountainless14-15.jpg" alt="MOUNTAINLESS 14-15 Season Recap"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://player.vimeo.com/video/157653116" data-vidplayer="vimeo"><img width="600" height="300" class="lazy" data-src="../../images/Mountainless14-15.jpg" alt="MOUNTAINLESS: 14-15 Season Recap"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/157653116" target="_blank" rel="noopener" rel="noreferrer">MOUNTAINLESS: 14-15 Season Recap</a></h1>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://player.vimeo.com/video/157653116" data-vidplayer="vimeo">MOUNTAINLESS: 14-15 Season Recap</button>
                             <p>A Recap of our Mountainless Webseries from the 14-15 Season. Film by Seth Leinbach, Ryan Ruffing, Zach Lastrilla, Alex Havey</p>
                         </div>
                     </div>
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/126764465" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/mountainless_capitol.jpg" alt="MOUNTAINLESS Capitol"></a>
-                        </div>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/9R2vCcsTPjc" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/mountainless_capitol.jpg" alt="MOUNTAINLESS: Capitol"></button>
+                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/126764465" target="_blank" rel="noopener" rel="noreferrer">MOUNTAINLESS: Capitol</a></h1>
+                            <h1><a href="https://www.newschoolers.com/videos/watch/769696/Mountainless---Capitol" target="_blank" rel="noopener" rel="noreferrer">MOUNTAINLESS: Capitol</a></h1>
                             <p>Unaffiliated crew ski the streets of Madison Wisconsin. Edited by Seth Leinbach. Filmed by Seth Leinbach, Ryan Ruffing, Zach Lastrilla, and crew. Skiing by Seth Leinbach, Paul Marik, Conner Ross, Brad Wolff, Cody Larson, Matt
                                 Kaye. Boarding by Carter Allen, Lee Pinkerton. Music - Push it - iSHi, Pusha T, Oil Money - Freddie Gibbs</p>
                         </div>
@@ -182,10 +202,11 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/123335156" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/bedrock.jpg" alt="MOUNTAINLESS Bedrock"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/Z544bqcYWvM" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/bedrock.jpg" alt="MOUNTAINLESS: Bedrock"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/123335156" target="_blank" rel="noopener" rel="noreferrer">MOUNTAINLESS: Bedrock</a></h1>
+                            <h1><a href="https://www.newschoolers.com/videos/watch/765902/Mountainless----Bedrock-" target="_blank" rel="noopener" rel="noreferrer">MOUNTAINLESS: Bedrock</a></h1>
                             <p>Cover Photo by Andrew Von Haden - vontography.com/ Riders: Paul Marik, Jon Fox, Seth Leinbach, Conner Ross, Carter Allen, Rayce Ruffing. Edited by: Ryan Ruffing. Filmed by: Seth Leinbach and Ryan Ruffing. Additional filming
                                 by: Alex Havey, Zach Lastrilla, Paul Marik. Song- Clockwork Indigo - XYNO</p>
                         </div>
@@ -193,10 +214,11 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/122878314" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/base.jpg" alt="MOUNTAINESS: Base"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/l7TfOci90PY" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/base.jpg" alt="MOUNTAINLESS: Base"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/122878314" target="_blank" rel="noopener" rel="noreferrer">MOUNTAINLESS: Base</a></h1>
+                            <h1><a href="https://www.newschoolers.com/videos/watch/763370/Mountainless----Base-" target="_blank" rel="noopener" rel="noreferrer">MOUNTAINLESS: Base</a></h1>
                             <p>Riders: Paul Marik, Jon Fox, Seth Leinbach, Conner Ross, Carter Allen, Rayce Ruffing, Ethan Crispell. Edited by: Seth Leinbach. Filmed by: Seth Leinbach and Ryan Ruffing. Additional filming by: Alex Havey, Zach Lastrilla, Paul
                                 Marik. Music: Tame Impala - Half Glass of Wine. Tame Impala - Why Wont You Make Up Your Mind (Erol Alkans Extended Rework)</p>
                         </div>
@@ -204,10 +226,10 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/121229696" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/mountainless.jpg" alt="MOUNTIANLESS Webseries Teaser"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://player.vimeo.com/video/121229696" data-vidplayer="vimeo"><img width="600" height="300" class="lazy" data-src="../../images/mountainless.jpg" alt="MOUNTAINLESS Webseries Trailer"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/121229696" target="_blank" rel="noopener" rel="noreferrer">"MOUNTAINLESS" Webseries Teaser</a></h1>
+                            <h1><a href="https://www.newschoolers.com/videos/watch/761153/-MOUNTAINLESS--Webseries-Teaser" target="_blank" rel="noopener" rel="noreferrer">"MOUNTAINLESS" Webseries Teaser</a></h1>
                             <p>Produced by Unaffiliated Productions. Directed by Seth Leinbach, Paul Marik, Ryan Ruffing. Cinematography by Seth Leinbach, Ryan Ruffing, Paul Marik, Zach Lastrilla. Editing by Seth Leinbach, Ryan Ruffing. Riders: Paul Marik,
                                 Seth Leinbach, Jon Fox, Carter Allen, Conner Ross, Brad Wolff, Rayce Ruffing and Friends. Music: Clams Casino - Crystals. Thanks to DOC 360, Newschoolers, Les Moise, Royal Outerwear, K2 Skis</p>
                         </div>
@@ -233,6 +255,94 @@
                 </p>
             </div>
         </footer>
+
+        <script>
+            function addVimeoPlayer(videoLink, vidTarget){
+                let modalVid = document.createElement('iframe');
+                modalVid.src = videoLink;
+                modalVid.width = 640;
+                modalVid.height = 360;
+                modalVid.frameBorder = '0';
+                modalVid.allow = "autoplay; fullscreen";
+                modalVid.allowFullscreen = true;
+
+                vidTarget.appendChild(modalVid)
+            }
+
+            function addYtPlayer(videoLink, vidTarget){
+                let modalVid = document.createElement('iframe');
+                modalVid.src= videoLink;
+                modalVid.width = 560;
+                modalVid.height = 315;
+                modalVid.frameBorder = '0';
+                modalVid.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+                modalVid.allowFullscreen = true;
+
+                vidTarget.appendChild(modalVid);
+            }
+
+            const vidTarget = document.getElementById('video-target');
+
+            function openModal(modal, videoLink, videoPlayer) {
+                // Note: fixed elements will also need the margin 
+                // adjustment (like a fixed header, if you have one).
+
+                if(videoPlayer === "youtube"){
+                    addYtPlayer(videoLink, vidTarget);
+                }
+                else{
+                    addVimeoPlayer(videoLink, vidTarget);
+                }
+
+                modal.classList.add('modal-show');
+                var scrollBarWidth = window.innerWidth - document.body.offsetWidth;
+                document.body.style.margin = '0px ' + scrollBarWidth + 'px 0px 0px';
+                document.body.style.overflow = 'hidden';
+                modal.style.overflowY = "visible";
+            };
+            
+            function closeModal(modal) {
+                vidTarget.removeChild(vidTarget.childNodes[0]);
+                document.body.style.margin = '';
+                document.body.style.overflow = '';
+                modal.classList.remove('modal-show');
+                modal.style.overflow = "hidden";
+            };
+            
+            let modal = document.getElementById('modal');
+            let closeModalBtn = document.getElementById('close-modal');
+            let innerModal = document.getElementById('modal-inner');
+
+            closeModalBtn.addEventListener('click', function(){
+                closeModal(modal);
+            });
+            
+            // Clicking outside the inner modal content should close it.
+            modal.addEventListener('click', function () {
+                closeModal(modal);
+            });
+
+            innerModal.addEventListener('click', function () {
+                closeModal(modal);
+            });
+
+            for (var i = 0; i <  modal.childNodes.length; i++) {
+                modal.childNodes[i].addEventListener('click', function (event) {
+                    event.stopPropagation();
+                });
+            }
+
+            let openModalElements = document.getElementsByClassName('open');
+
+            // Open the modal when open button is pressed.
+            for(let i = 0; i < openModalElements.length; i++){
+                openModalElements[i].addEventListener('click', function(e){
+                    e.preventDefault;
+                    openModal(modal, openModalElements[i].dataset.iframe, openModalElements[i].dataset.vidplayer);
+                })
+            }
+           
+</script>
 </body>
 
 </html>

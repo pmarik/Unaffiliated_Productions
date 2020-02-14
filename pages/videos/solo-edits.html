@@ -93,22 +93,37 @@
             <div class="projects-body">
                 <div id="projects-grid">
 
+                     <!-- modal target -->
+                     <div id="modal" class="modal">
+                        <div class="modal-inner" id="modal-inner">
                         <div class="project">
-                                <div class="video-wrapper">
-                                    <a href="https://www.youtube.com/watch?v=c4h9Ut-UIlY&t=1s" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" src="../../images/pm-boxset-coverr.png" alt="Paul Marik | Box Set Full Part"></a>
-                                </div>
-                                <div class="video-description">
-                                    <h1><a href="https://www.youtube.com/watch?v=c4h9Ut-UIlY&t=1s" target="_blank" rel="noopener" rel="noreferrer">Paul Marik | Box Set Full Part</a></h1>
-                                    <p>A compilation of Street shots from Unaffiliated's latest movie Box Set.</p>
-                                </div>
+                            <div class="video-wrapper" id="video-target"></div>
+                            <div class="close-space">
+                                <button id="close-modal">&times</button>
+                            </div>
                         </div>
+                        </div>
+                    </div>
+
+                    <!-- ********************** begin videos list *********************** -->
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://www.youtube.com/watch?v=GbclStATMiw" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" src="../../images/sethUrbanEdit.jpeg" alt="Seth Leinbach | Urban Skiing Reel"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/c4h9Ut-UIlY" data-vidplayer="youtube"><img width="600" height="300" src="../../images/pm-boxset-coverr.png" alt="Paul Marik | Box Set Full Part"/></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://www.youtube.com/watch?v=GbclStATMiw" target="_blank" rel="noopener" rel="noreferrer">Seth Leinbach | Urban Skiing Reel</a></h1>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/c4h9Ut-UIlY" data-vidplayer="youtube">Paul Marik | Box Set Full Part</button>
+                            <p>A compilation of Street shots from Unaffiliated's latest movie Box Set.</p>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="video-wrapper">
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/GbclStATMiw" data-vidplayer="youtube">                              
+                                <img width="600" height="300" class="lazy" data-src="../../images/sethUrbanEdit.jpeg" alt="Seth Leinbach Urban Edit"></button>
+                        </div>
+                        <div class="video-description">
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/GbclStATMiw" data-vidplayer="youtube">Seth Leinbach | Urban Skiing Reel</button>
                             <p>A compilation of Street shots from the last couple years filming for the Unaffiliated Webseries</p>
                         </div>
                     </div>
@@ -117,16 +132,19 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://www.youtube.com/watch?v=bDGme8YWpQ0" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" src="../../images/paulseason.jpg" alt="Paul Marik 16-17"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/bDGme8YWpQ0" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/paulseason.jpg" alt="Paul Marik 16-17 Season Edit"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://www.youtube.com/watch?v=bDGme8YWpQ0" target="_blank" rel="noopener" rel="noreferrer">Paul Marik 16-17</a></h1>
-                            Paul Marik's park shots from the 16-17 winter season! </div>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/bDGme8YWpQ0" data-vidplayer="youtube">                             
+                                Paul Marik 16-17</button>
+                            <p>Paul Marik's park shots from the 16-17 winter season! </p>
+                        </div>
                     </div>
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://www.newschoolers.com/videos/watch/820615/Rayce-s-Discretion" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/RayceDisc.jpg" alt="Rayce's Discretion - Unaffiliated Productions"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://player.vimeo.com/video/158590006" data-vidplayer="vimeo"><img width="600" height="300" class="lazy" data-src="../../images/RayceDisc.jpg" alt="Rayce's Discretion - Unaffiliated Productions"></button>
                         </div>
                         <div class="video-description">
                             <h1><a href="https://www.newschoolers.com/videos/watch/820615/Rayce-s-Discretion" target="_blank" rel="noopener" rel="noreferrer">Rayce's Discretion</a></h1>
@@ -136,17 +154,20 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://www.youtube.com/watch?v=qcOUIikH-24" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/Cross2015.jpg" alt="Conner Ross 14/15 Season"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/qcOUIikH-24" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/Cross2015.jpg" alt="Conner Ross 14/15 Season"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://www.youtube.com/watch?v=qcOUIikH-24" target="_blank" rel="noopener" rel="noreferrer">Conner Ross 14/15 Season</a></h1>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/qcOUIikH-24" data-vidplayer="youtube">                             
+                                Conner Ross 14/15 Season</button>
                             <p>Conner Ross killing the Midwest parks in his 14/15 season edit. Filmed by: Alex Havey</p>
                         </div>
                     </div>
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://www.newschoolers.com/videos/watch/789063/Paul-Marik---Summer-Service-" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/pppss.jpg" alt="Paul Marik - Summer Service"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/Yye92zJNE6Y" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/pppss.jpg" alt="Paul Marik - Summer Service"></button>
                         </div>
                         <div class="video-description">
                             <h1><a href="https://www.newschoolers.com/videos/watch/789063/Paul-Marik---Summer-Service-" target="_blank" rel="noopener" rel="noreferrer">Paul Marik - Summer Service</a></h1>
@@ -156,8 +177,9 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://www.newschoolers.com/videos/watch/744518/Rayce-s-Big-Day" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/RayceBigDay.jpg" alt="Rayce's Big Day - Unaffiliated Productions"></a>
-                        </div>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/w3pOpC8CMKA" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/RayceBigDay.jpg" alt="Rayce's Big Day - Unaffiliated Productions"></button>
+                            </div>
                         <div class="video-description">
                             <h1><a href="https://www.newschoolers.com/videos/watch/744518/Rayce-s-Big-Day" target="_blank" rel="noopener" rel="noreferrer">Rayce's Big Day</a></h1>
                             <p>Things get rowdy when your park skis are in the shop. So Rayce decided to get aggressive with his skiing. Credit: Ryan Ruffing</p>
@@ -166,20 +188,24 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/102427474" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/lee_pinkerton_zach_lastrilla.jpg" alt="Lee Pinkerton / Zach Lastrilla 13-14"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/LkPhi1K_aSc" data-vidplayer="youtube">                             
+                                <img width="600" height="300" src="../../images/lee_pinkerton_zach_lastrilla.jpg" alt="Lee Pinkerton / Zach Lastrilla 13-14"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/102427474" target="_blank" rel="noopener" rel="noreferrer">Lee Pinkerton / Zach Lastrilla 13-14</a></h1>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/LkPhi1K_aSc" data-vidplayer="youtube">                             
+                                Lee Pinkerton / Zach Lastrilla 13-14</button>
                             <p>Lee and Zach duo season edit!</p>
                         </div>
                     </div>
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/97605582" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/rayce_ruffing_13_14.jpg" alt="The Basics // Rayce Ruffing"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/PYHjmXEkn1I" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/rayce_ruffing_13_14.jpg" alt="The Basics // Rayce Ruffing"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/97605582" target="_blank" rel="noopener" rel="noreferrer">The Basics // Rayce Ruffing</a></h1>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/PYHjmXEkn1I" data-vidplayer="youtube">                             
+                                The Basics // Rayce Ruffing</button>
                             <p>The most basic park skier from the Midwest. He has the basic jumps, rails and style on lock. Check out what he got done this season 13-14 filming around Wisconsin and a week out west. Filmed and Edited by Ryan Ruffing. Titles
                                 by Zach Lastrilla. Equipment: Canon t3i,60d,t2i, Rode video mic, Tokina 11-16, Tamron 17-50</p>
                         </div>
@@ -187,30 +213,32 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/95263281" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/paul_marik_13_14.jpg" alt="Paul Marik - 13/14 Season Edit"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/_DhAbZtVvFs" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/paul_marik_13_14.jpg" alt="Paul Marik - 13/14 Season Edit"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/95263281" target="_blank" rel="noopener" rel="noreferrer">Paul Marik - 13/14 Season Edit</a></h1>
+                            <h1><a href="https://www.newschoolers.com/videos/watch/712108/Paul-Marik---Peaks-to-the-Streets" target="_blank" rel="noopener" rel="noreferrer">Paul Marik - 13/14 Season Edit</a></h1>
                             <p>Paul Marik's 13/14 season. Special thanks to K2 Skis, Les Moise, and Doc 360. Filmed by Ryan Ruffing, Seth Leinbach, Zach Lastrilla, Courtis Merry, and John Arendt. Edited by Seth Leinbach. Song: Stromae - Carmen</p>
                         </div>
                     </div>
-
+                   
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/75365233" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/brad-wolff-12-13.jpg" alt="Brad Wolff 2012-2013"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://player.vimeo.com/video/75365233" data-vidplayer="vimeo"><img width="600" height="300" class="lazy" data-src="../../images/brad-wolff-12-13.jpg" alt="Brad Wolff - 2012/2013"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/75365233" target="_blank" rel="noopener" rel="noreferrer">Brad Wolff 2012-2013</a></h1>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://player.vimeo.com/video/75365233" data-vidplayer="vimeo">Brad Wolff 2012-2013</button>
                             <p>Special thanks to K2 and Les Moise. Filmed by Seth Leinbach, Ryan Ruffing, Zach Lastrilla, and Michael Wolff. Edited by Zach Lastrilla.</p>
                         </div>
                     </div>
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/72839124" target="_blank" rel="noopener" rel="noreferrer" ><img width="600" height="300" class="lazy" data-src="../../images/paul-marik-12-13.jpg" alt="Paul Marik 12/13 Season Edit"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/E57t4kRw97w" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/paul-marik-12-13.jpg" alt="Paul Marik 12/13 Season Edit"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/72839124" target="_blank" rel="noopener" rel="noreferrer">Paul Marik - 12/13 Season Edit</a></h1>
+                            <h1><a href="https://www.newschoolers.com/videos/watch/653157/Paul-Marik---12-13-Season-Edit" target="_blank" rel="noopener" rel="noreferrer">Paul Marik - 12/13 Season Edit</a></h1>
                             <p>Paul Marik's 12/13 season. Special thanks to Les Moise and K2 Skis. Filmed by Zach Lastrilla, Seth Leinbach, Ryan Ruffing, Matt Kretzschmar, Louis Holian, Braden Just, and Matt P'ng. Edited by Seth Leinbach. Song - Macon Hamilton
                                 - Blue 32</p>
                         </div>
@@ -218,31 +246,44 @@
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/72307550" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/seth-leinbach-12-13.jpg" alt="Seth Leinbach - 12/13 Season Edit"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/s3aiMOefLMQ" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/seth-leinbach-12-13.jpg" alt="Seth Leinbach 12/13 Season Edit"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/72307550" target="_blank" rel="noopener" rel="noreferrer">Seth Leinbach - 12/13 Season Edit</a></h1>
+                            <h1><a href="https://www.newschoolers.com/videos/watch/651966/Seth-Leinbach---12-13-Season" target="_blank rel=" noopener " rel="noreferrer "">Seth Leinbach - 12/13 Season Edit</a></h1>
                             <p>Seth Leinbach's 12/13 Season. Filmed in Wisconsin at Tyrol Basin, Granite Peak, & Sunburst.</p>
                         </div>
                     </div>
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/67149610" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/zach-lastrilla-12-13.jpg" alt="Zach Lastrilla - 12/13 Season"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://player.vimeo.com/video/67149610" data-vidplayer="vimeo"><img width="600" height="300" class="lazy" data-src="../../images/zach-lastrilla-12-13.jpg" alt="Zach Lastrilla - 12/13 Season"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/67149610" target="_blank" rel="noopener" rel="noreferrer">Zach Lastrilla - 2012-2013</a></h1>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://player.vimeo.com/video/67149610" data-vidplayer="vimeo">Zach Lastrilla - 2012-2013</button>
                             <p>Here is Zach Lastrilla's season edit from this winter! </p>
                         </div>
                     </div>
 
                     <div class="project">
                         <div class="video-wrapper">
-                            <a href="https://vimeo.com/41165164" target="_blank" rel="noopener" rel="noreferrer"><img width="600" height="300" class="lazy" data-src="../../images/seth-leinbach.jpg" alt="Seth Leinbach 11/12"></a>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://player.vimeo.com/video/41165164" data-vidplayer="vimeo"><img width="600" height="300" class="lazy" data-src="../../images/seth-leinbach.jpg" alt="Seth Leinbach 11/12"></button>
                         </div>
                         <div class="video-description">
-                            <h1><a href="https://vimeo.com/41165164" target="_blank" rel="noopener" rel="noreferrer">Seth Leinbach 11/12</a></h1>
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://player.vimeo.com/video/41165164" data-vidplayer="vimeo">Seth Leinbach 11/12</button>
                             <p>Just a few shots of Seth Leinbach throughout the 2011 - 2012 winter season.</p>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="video-wrapper">
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/1e_SULO1i0o" data-vidplayer="youtube">                             
+                                <img width="600" height="300" class="lazy" data-src="../../images/paulmarik1112.jpg" alt="Paul Marik 11/12"></button>
+                        </div>
+                        <div class="video-description">
+                            <button class="open" type="button" aria-hidden="true" data-iframe="https://www.youtube.com/embed/1e_SULO1i0o" data-vidplayer="youtube">                             
+                                Paul Marik - 11/12</button>
+                            <p>Paul Marik 2011 - 2012 winter season.</p>
                         </div>
                     </div>
                 </div>
@@ -265,6 +306,94 @@
                 </p>
             </div>
         </footer>
+
+        <script>
+            function addVimeoPlayer(videoLink, vidTarget){
+                let modalVid = document.createElement('iframe');
+                modalVid.src = videoLink;
+                modalVid.width = 640;
+                modalVid.height = 360;
+                modalVid.frameBorder = '0';
+                modalVid.allow = "autoplay; fullscreen";
+                modalVid.allowFullscreen = true;
+
+                vidTarget.appendChild(modalVid)
+            }
+
+            function addYtPlayer(videoLink, vidTarget){
+                let modalVid = document.createElement('iframe');
+                modalVid.src= videoLink;
+                modalVid.width = 560;
+                modalVid.height = 315;
+                modalVid.frameBorder = '0';
+                modalVid.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+                modalVid.allowFullscreen = true;
+
+                vidTarget.appendChild(modalVid);
+            }
+
+            const vidTarget = document.getElementById('video-target');
+
+            function openModal(modal, videoLink, videoPlayer) {
+                // Note: fixed elements will also need the margin 
+                // adjustment (like a fixed header, if you have one).
+
+                if(videoPlayer === "youtube"){
+                    addYtPlayer(videoLink, vidTarget);
+                }
+                else{
+                    addVimeoPlayer(videoLink, vidTarget);
+                }
+
+                modal.classList.add('modal-show');
+                var scrollBarWidth = window.innerWidth - document.body.offsetWidth;
+                document.body.style.margin = '0px ' + scrollBarWidth + 'px 0px 0px';
+                document.body.style.overflow = 'hidden';
+                modal.style.overflowY = "visible";
+            };
+            
+            function closeModal(modal) {
+                vidTarget.removeChild(vidTarget.childNodes[0]);
+                document.body.style.margin = '';
+                document.body.style.overflow = '';
+                modal.classList.remove('modal-show');
+                modal.style.overflow = "hidden";
+            };
+            
+            let modal = document.getElementById('modal');
+            let closeModalBtn = document.getElementById('close-modal');
+            let innerModal = document.getElementById('modal-inner');
+
+            closeModalBtn.addEventListener('click', function(){
+                closeModal(modal);
+            });
+            
+            // Clicking outside the inner modal content should close it.
+            modal.addEventListener('click', function () {
+                closeModal(modal);
+            });
+
+            innerModal.addEventListener('click', function () {
+                closeModal(modal);
+            });
+
+            for (var i = 0; i <  modal.childNodes.length; i++) {
+                modal.childNodes[i].addEventListener('click', function (event) {
+                    event.stopPropagation();
+                });
+            }
+
+            let openModalElements = document.getElementsByClassName('open');
+
+            // Open the modal when open button is pressed.
+            for(let i = 0; i < openModalElements.length; i++){
+                openModalElements[i].addEventListener('click', function(e){
+                    e.preventDefault;
+                    openModal(modal, openModalElements[i].dataset.iframe, openModalElements[i].dataset.vidplayer);
+                })
+            }
+           
+</script>
 </body>
 
 
