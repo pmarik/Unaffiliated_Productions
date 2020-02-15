@@ -1126,6 +1126,7 @@ img[src$="ns-icon.png"]:hover {
   margin-left: 10px;
   position: relative; }
   .close-space button {
+    background-color: transparent;
     padding: 0;
     margin: 0;
     display: -webkit-box;
@@ -1166,15 +1167,12 @@ body {
   outline: none; }
 
 #close-modal {
-  font-size: 35px;
-  line-height: 35px;
+  font-size: 40px;
+  line-height: 40px;
   border: none;
-  background: #fff;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  position: absolute; }
+  position: absolute;
+  color: #fff; }
 
 #close-modal:hover {
   color: red; }
