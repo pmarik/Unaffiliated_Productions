@@ -16,12 +16,13 @@ videoHeight -= 70;
 
 
 /***** Navigation animations for full screen and mobile with burger menu *****/
-const burger = document.getElementsByTagName('nav')[0];
-document.querySelector("#nav-toggle")
-    .addEventListener("click", function() {
-        this.classList.toggle("active");
-        burger.classList.toggle('visibleNav');
-    });
+// const burger = document.getElementsByTagName('nav')[0];
+// document.querySelector("#nav-toggle")
+//     .addEventListener("click", function() {
+//         this.classList.toggle("active");
+//         burger.classList.toggle('visibleNav');
+//     });
+
 
 
 /* ALL ON WINDOW RESIZE EVENTS *****************
@@ -34,8 +35,8 @@ window.onresize = window.onload = function() {
     width = this.innerWidth;
     if (width > 939) {
         //reset the burger menu to default when open and resizing window
-        document.querySelector("#nav-toggle").classList.remove("active");
-        burger.classList.add('visibleNav');
+        // document.querySelector("#nav-toggle").classList.remove("active");
+        // burger.classList.add('visibleNav');
 
         //remove image slider with larger viewport size
         let slider = document.querySelectorAll('.slide');
@@ -101,3 +102,9 @@ for (let i = 0; i < navCollection.length; i++) {
         vidWrap.style.display = "none";
     });
 }
+
+let hamburger = document.querySelector('.hamburger');
+
+hamburger.addEventListener('click', function(){
+this.classList.toggle("is-active");
+}, false);
