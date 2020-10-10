@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Yanone+Kaffeesatz:wght@700&display=swap');
+
+/*** CSS Remedies ***/
+
+/* Use border-box by default, globally */
+*, ::before, ::after { box-sizing: border-box; }
+
+/* 
+* Consistent line spacing...
+* CSS Inline Layout Module Level 3: https://drafts.csswg.org/css-inline-3/#line-sizing-property
+*/
+
+html, body { 
+    line-sizing: normal; 
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    //scroll-behavior: smooth;
+    //overscroll-behavior: contain;
+    // position: fixed;
+    // overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    background: #FDFFFC;
+
+    // #gatsby-focus-wrapper{
+    //   width: 100vw;
+    //   height: 100vh;
+    //   overflow-y: scroll;
+    //   -webkit-overflow-scrolling: touch;
+    // }
+}
+
+html, body, p, ol, ul, li, textarea, iframe, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Headings
+***********/
+
+/* Switch to rem units for headings */
+/* @@@ Initial values are based on existing browser defaults */
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 0.83rem; }
+h6 { font-size: 0.67rem; }
+
+/* Keep h1 margins consistent, even when nested */
+h1 { 
+  margin: 0 0 0.3em 0;
+ }
+
+h2{
+  margin: 0 0 0.5em 0;
+}
+
+h1, h2, h3, h4, h5, h6, label {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #383838;
+    line-height: 1;
+}
+
+p, a, input, textarea, q, .jump-txt {
+    font-family: 'Lato', sans-serif;
+   // font-family: 'Nunito', sans-serif !important;
+    color: #425466;
+    font-size: 0.9rem;
+}
+
+.jump-txt:hover{
+  cursor: pointer;
+}
+
+p, q{
+  line-height: 1.75;
+}
+
+a {
+    text-decoration: none;
+    color: #354762;
+}
+
+input, textarea {
+  font-size: 1rem;
+}
+
+label {
+  font-size: 1.25rem;
+}
+
+span.btn-text{
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: bold;
+}
+
+
+/* Overflow by default is bad */
+pre { white-space: pre-wrap; }
+
+/*
+* 1. Solid, thin horizontal rules
+* 2. Remove Firefox `color: gray`
+* 3. Remove default `1px` height, and common `overflow: hidden`
+*/
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+
+/* Embedded Elements
+********************/
+
+/*
+* 1. Block display is usually what we want
+* 2. Remove strange space-below when inline
+* 3. Responsive by default
+*/
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+/*
+* Maintain intrinsic aspect ratios when `max-width` is applied
+* (iframe, embed, and object have no intrinsic ratio, set height explicitly)
+*/
+img, svg, video, canvas {
+  height: auto;
+}
+
+/*
+* There is no good reason elements default to 300px,
+* and audio files are unlikely to come with a width attribute
+*/
+audio { width: 100%; }
+
+
+/* Old Browsers
+***************/
+
+/* Remove the border on images inside links in IE 10 and earlier */
+img { border-style: none; }
+
+/* Hide the overflow in IE 10 and earlier */
+svg { overflow: hidden; }
+
+/* Default block display on HTML5 elements */
+article, aside, figcaption, figure, footer, header, hgroup, main, section, div {
+  display: block;
+}
+
+/*
+* 1. Add the correct box sizing in IE 10
+* 2. Remove the padding in IE 10
+*/
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+    font-size: 0.9rem; 
+}
+
+.main-content{
+  margin: 4rem 5% 0 5%;
+  border: 1px solid transparent;
+  max-width: 1400px;
+  min-width: 270px;
+  flex: 1;
+}
+
+a.anchor{
+  display: block;	
+  position: relative;	
+  top: -3.25rem;	//equal to height of header
+  visibility: hidden;
+}
+
+.app-wrap{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+//tablet screen styles
+@media screen and (min-width: 481px){
+  h1 { font-size: 3.2rem; }
+  h2 { font-size: 2.5rem;}
+  p, a, input, textarea, q, .jump-txt {
+    color: #425466;
+    font-size: 1.17rem;
+  }
+}
+
+//laptops, small screens
+@media screen and (min-width: 769px){
+  .main-content{
+    margin: 4rem 12% 0 12%;
+  }
+}
+
+//desktop, large screens
+@media screen and (min-width: 1025px){
+
+}
+
+//TV, XL screens
+@media screen and (min-width: 2001px){
+  .main-content{
+    margin: 0 auto;
+  }
+}

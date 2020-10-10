@@ -1,15 +1,16 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import './all.sass'
-import useSiteMetadata from './SiteMetadata'
+import Footer from '../footer/Footer'
+//import Navbar from './Navbar'
+import Navbar from '../navbar/Navbar.component'
+import useSiteMetadata from '../SiteMetadata'
 import { withPrefix } from 'gatsby'
+import './layout.styles.scss';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <div className="app-wrap">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -49,7 +50,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <main className="main-content">{children}</main>
       <Footer />
     </div>
   )
